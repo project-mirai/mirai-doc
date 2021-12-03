@@ -1,0 +1,18 @@
+<html>
+<body>
+
+<script>
+    fetch("versions.json").then(function (it) {
+        return it.json()
+    }).then(function (array) {
+        var ver = array[array.length - 1];
+        if (location.href.endsWith("/")) {
+            location.href += ver
+        } else {
+            location.href += "/" + ver
+        }
+    })
+</script>
+
+</body>
+</html>
