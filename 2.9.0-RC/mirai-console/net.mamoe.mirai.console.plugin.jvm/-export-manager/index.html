@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ExportManager</title>
+</head><body><link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../scripts/main.js" async></script><script type="text/javascript" src="../../../scripts/prism.js" async></script><script type="text/javascript" src="../../../images/ext.js" async></script><script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+
+  
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html"><span>mirai</span></a></div>
+      <div>2.9.0-RC</div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main"><script type="text/javascript" src="../../../scripts/main.js"></script>
+        <div class="main-content" id="content" pageids="mirai-console::net.mamoe.mirai.console.plugin.jvm/ExportManager///PointingToDeclaration//1919319378">
+          <div class="breadcrumbs"><a href="../../index.html">mirai-console</a>/<a href="../index.html">net.mamoe.mirai.console.plugin.jvm</a>/<a href="index.html">ExportManager</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Export</span><wbr><span><span>Manager</span></span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation">ConsoleExperimentalApi</span></a></div></div><span class="token keyword">interface </span><a href="index.html">ExportManager</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">插件的类导出管理器</p><p class="paragraph">允许插件将一些内部实现保护起来， 避免其他插件调用， 要启动这个特性， 只需要创建名为 <code class="lang-kotlin">export-rules.txt</code> 的规则文件，便可以控制插件的类的公开规则。</p><p class="paragraph">如果正在使用 <code class="lang-kotlin">Gradle</code> 项目, 该规则文件一般位于 <code class="lang-kotlin">src/main/resources</code> 下</p><p class="paragraph">Example:</p><div class="sample-container"><pre><code class="block lang-text" theme="idea"># #开头的行全部识别为注释<br><br># exports, 允许其他插件直接使用某个类<br><br># 导出了一个internal包的一个类<br>#<br>exports org.example.miraiconsole.myplugin.internal.OpenInternal<br><br># 导出了整个 api 包<br>#<br>exports org.example.miraiconsole.myplugin.api<br><br># 保护 org.example.miraiconsole.myplugin.api2.Internal, 不允许其他插件直接使用<br>#<br>protects org.example.miraiconsole.myplugin.api2.Internal<br><br># 保护整个包<br>#<br># 别名: protect-package<br>protects org.example.miraiconsole.myplugin.internal<br><br># 此规则不会生效, 因为在此条规则之前,<br># org.example.miraiconsole.myplugin.internal 已经被加入到保护域中<br>exports org.example.miraiconsole.myplugin.internal.NotOpenInternal<br><br><br># export-plugin, 允许其他插件使用除了已经被保护的全部类<br># 使用此规则会同时让此规则后的所有规则全部失效<br># 别名: export-all, export-system<br># export-plugin<br><br><br># 将整个插件放入保护域中<br># 除了此规则之前显式 export 的类, 其他插件将不允许直接使用被保护的插件的任何类<br># 别名: protect-all, protect-system<br>protect-plugin</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">插件也可以通过 Service 来自定义导出控制</p><p class="paragraph">Example:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">@AutoService(ExportManager::class)<br>object MyExportManager: ExportManager {<br>override fun isExported(className: String): Boolean {<br>println("  &lt;== $className")<br>return true<br>}<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="See also">See also</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">See also</h2>
+              <div data-togglable="See also">
+                <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><a href="../-standard-export-managers/index.html">net.mamoe.mirai.console.plugin.jvm.StandardExportManagers</a></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div></div></div></div></div>
+              </div>
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="-780690996%2FFunctions%2F1919319378" anchor-label="isExported" id="-780690996%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+                <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="is-exported.html"><span>is</span><wbr><span><span>Exported</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-780690996%2FFunctions%2F1919319378"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="is-exported.html"><span class="token function">isExported</span></a><span class="token punctuation">(</span>className<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">如果 <a href="is-exported.html">className</a> 能够通过 <a href="index.html">ExportManager</a> 的规则, 返回 true</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Inheritors</h2>
+              <div class="table" data-togglable="Inheritors"><a data-name="801204386%2FInheritors%2F1919319378" anchor-label="AllExported" id="801204386%2FInheritors%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+                <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-standard-export-managers/-all-exported/index.html">AllExported</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="801204386%2FInheritors%2F1919319378"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="-151479718%2FInheritors%2F1919319378" anchor-label="AllDenied" id="-151479718%2FInheritors%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+                <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-standard-export-managers/-all-denied/index.html">AllDenied</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-151479718%2FInheritors%2F1919319378"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2021 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+</body></html>
+
+
