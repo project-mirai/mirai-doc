@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>asProgressionCallback</title>
+</head><body><link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script><link href="../../../../styles/style.css" rel="Stylesheet"><link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../styles/main.css" rel="Stylesheet"><link href="../../../../styles/prism.css" rel="Stylesheet"><link href="../../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../../scripts/main.js" async></script><script type="text/javascript" src="../../../../scripts/prism.js" async></script><script type="text/javascript" src="../../../../images/ext.js" async></script><script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+
+  
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../../index.html"><span>mirai</span></a></div>
+      <div>2.9.0-RC2</div>
+      <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section"><button class="platform-tag platform-selector common-like" data-active="" data-filter=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main"><script type="text/javascript" src="../../../../scripts/main.js"></script>
+        <div class="main-content" id="content" pageids="mirai-core-api::net.mamoe.mirai.utils/ProgressionCallback.Companion/asProgressionCallback/kotlinx.coroutines.channels.SendChannel[TypeParam(bounds=[kotlin.Any?])]#kotlin.Boolean/PointingToDeclaration//952922136">
+          <div class="breadcrumbs"><a href="../../../index.html">mirai-core-api</a>/<a href="../../index.html">net.mamoe.mirai.utils</a>/<a href="../index.html">ProgressionCallback</a>/<a href="index.html">Companion</a>/<a href="as-progression-callback.html">asProgressionCallback</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>as</span><wbr><span>Progression</span><wbr><span><span>Callback</span></span></h1>
+          </div>
+          <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+            <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="as-progression-callback.html">S</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="as-progression-callback.html">P</a><span class="token operator">&gt; </span><span data-unresolved-link="kotlinx.coroutines.channels/SendChannel///PointingToDeclaration/">SendChannel</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="as-progression-callback.html">P</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="as-progression-callback.html"><span class="token function">asProgressionCallback</span></a><span class="token punctuation">(</span>closeOnFinish<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">ProgressionCallback</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="as-progression-callback.html">S</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="as-progression-callback.html">P</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">将一个 <span data-unresolved-link="kotlinx.coroutines.channels/SendChannel///PointingToDeclaration/">SendChannel</span> 作为 <a href="../index.html">ProgressionCallback</a> 使用.</p><h2 class=""> 下载文件的使用示例</h2><p class="paragraph">每当有进度更新, 已下载的字节数都会被<span data-unresolved-link="kotlinx.coroutines.channels/SendChannel/offer/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/">发送</span>到 <span data-unresolved-link="kotlinx.coroutines.channels/SendChannel///PointingToDeclaration/">SendChannel</span> 中. 进度的发送会通过 <span data-unresolved-link="kotlinx.coroutines.channels/SendChannel/offer/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/">offer</span>, 而不是通过 <span data-unresolved-link="kotlinx.coroutines.channels/SendChannel/send/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/">send</span>. 意味着 <span data-unresolved-link="kotlinx.coroutines.channels/SendChannel///PointingToDeclaration/">SendChannel</span> 通常要实现缓存.</p><p class="paragraph">若 <a href="as-progression-callback.html">closeOnFinish</a> 为 <code class="lang-kotlin">true</code>, 当下载完成 (无论是失败还是成功) 时会 <span data-unresolved-link="kotlinx.coroutines.channels/SendChannel/close/#kotlin.Throwable?/PointingToDeclaration/">关闭</span><span data-unresolved-link="kotlinx.coroutines.channels/SendChannel///PointingToDeclaration/">SendChannel</span>.</p><p class="paragraph">使用示例:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val progress = Channel&lt;Long&gt;(Channel.BUFFERED)<br><br>launch {<br>  // 每 3 秒发送一次操作进度百分比<br>  progress.receiveAsFlow().sample(Duration.seconds(3)).collect { bytes -&gt;<br>    group.sendMessage("File upload: ${(bytes.toDouble() / resource.size * 100).toInt() / 100}%.") // 保留 2 位小数<br>  }<br>}<br><br>group.files.uploadNewFile("/foo.txt", resource, callback = progress.asProgressionCallback(true))<br>group.sendMessage("File uploaded successfully.")</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">直接使用 <a href="../index.html">ProgressionCallback</a> 也可以实现示例这样的功能, <a href="as-progression-callback.html">asProgressionCallback</a> 是为了简化操作.</p></div>          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2021 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+</body></html>
+
+

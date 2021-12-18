@@ -1,0 +1,1 @@
+sourceset_dependencies = '{":mirai-console:dokkaHtmlPartial/main":[],":mirai-core-api:dokkaHtmlPartial/androidMain":[":mirai-core-api:dokkaHtmlPartial/commonMain"],":mirai-core-api:dokkaHtmlPartial/commonMain":[],":mirai-core-api:dokkaHtmlPartial/jvmMain":[":mirai-core-api:dokkaHtmlPartial/commonMain"]}'
