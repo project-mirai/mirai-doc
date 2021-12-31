@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>invoke</title>
+</head><body><link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script><link href="../../../../styles/style.css" rel="Stylesheet"><link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../../styles/main.css" rel="Stylesheet"><link href="../../../../styles/prism.css" rel="Stylesheet"><link href="../../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../../scripts/main.js" async></script><script type="text/javascript" src="../../../../scripts/prism.js" async></script><script type="text/javascript" src="../../../../images/ext.js" async></script><script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+
+  
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../../index.html"><span>mirai</span></a></div>
+      <div>2.9.1</div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main"><script type="text/javascript" src="../../../../scripts/main.js"></script>
+        <div class="main-content" id="content" pageids="mirai-console::net.mamoe.mirai.console.util/SemVersion.Companion/invoke/#kotlin.String/PointingToDeclaration//1919319378">
+          <div class="breadcrumbs"><a href="../../../index.html">mirai-console</a>/<a href="../../index.html">net.mamoe.mirai.console.util</a>/<a href="../index.html">SemVersion</a>/<a href="index.html">Companion</a>/<a href="invoke.html">invoke</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span><span>invoke</span></span></h1>
+          </div>
+          <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation">JvmStatic</span></a></div><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-name/index.html"><span class="token annotation">JvmName</span></a><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"parse"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="invoke.html"><span class="token function">invoke</span></a><span class="token punctuation">(</span>version<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">SemVersion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">解析一个版本号, 将会返回一个 <a href="../index.html">SemVersion</a>, 如果发生解析错误将会抛出一个 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-argument-exception/index.html">IllegalArgumentException</a> 或者 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number-format-exception/index.html">NumberFormatException</a></p><p class="paragraph">对于版本号的组成, 有以下规定:</p><ul><li><p class="paragraph">必须包含主版本号和次版本号</p></li><li><p class="paragraph">存在 先行版本号 的时候 先行版本号 不能为空</p></li><li><p class="paragraph">存在 元数据 的时候 元数据 不能为空</p></li><li><p class="paragraph">核心版本号只允许 <code class="lang-kotlin">x.y</code> 和 <code class="lang-kotlin">x.y.z</code> 的存在</p></li><ul><li><p class="paragraph"><code class="lang-kotlin">1.0-RC</code> 是合法的</p></li><li><p class="paragraph"><code class="lang-kotlin">1.0.0-RC</code> 也是合法的, 与 <code class="lang-kotlin">1.0-RC</code> 一样</p></li><li><p class="paragraph"><code class="lang-kotlin">1.0.0.0-RC</code> 是不合法的, 将会抛出一个 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-illegal-argument-exception/index.html">IllegalArgumentException</a></p></li></ul></ul><p class="paragraph">注意情况:</p><ul><li><p class="paragraph">第一个 <code class="lang-kotlin">+</code> 之后的所有内容全部识别为元数据</p></li><ul><li><p class="paragraph"><code class="lang-kotlin">1.0+METADATA-M4</code>, metadata="METADATA-M4"</p></li></ul><li><p class="paragraph">如果不确定版本号是否合法, 可以使用 <a href="https://regex101.com/r/vkijKf/1/">regex101.com</a> 进行检查</p></li><ul><li><p class="paragraph">此实现使用的正则表达式为 <code class="lang-kotlin">^(0|[1-9]\d*)\.(0|[1-9]\d*)(?:\.(0|[1-9]\d*))?(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$</code></p></li></ul></ul></div></div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2021 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+</body></html>
+
+
