@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>nextEventOrNull</title>
+</head><body><link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>
+    <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script><link href="../../styles/style.css" rel="Stylesheet"><link href="../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../styles/main.css" rel="Stylesheet"><link href="../../styles/prism.css" rel="Stylesheet"><link href="../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../scripts/main.js" async></script><script type="text/javascript" src="../../scripts/prism.js" async></script><script type="text/javascript" src="../../images/ext.js" async></script><script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+
+  
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../index.html"><span>mirai</span></a></div>
+      <div>2.10.1</div>
+      <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section"><button class="platform-tag platform-selector common-like" data-active="" data-filter=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main"><script type="text/javascript" src="../../scripts/main.js"></script>
+        <div class="main-content" id="content" pageids="mirai-core-api::net.mamoe.mirai.event//nextEventOrNull/#kotlin.Long#net.mamoe.mirai.event.EventPriority#kotlin.Function1[TypeParam(bounds=[net.mamoe.mirai.event.Event]),kotlin.Boolean]/PointingToDeclaration//952922136">
+          <div class="breadcrumbs"><a href="../index.html">mirai-core-api</a>/<a href="index.html">net.mamoe.mirai.event</a>/<a href="next-event-or-null.html">nextEventOrNull</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>next</span><wbr><span>Event</span><wbr><span>Or</span><wbr><span><span>Null</span></span></h1>
+          </div>
+          <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+            <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace strikethrough"><strike><span class="token keyword">inline suspend </span></strike><strike><span class="token keyword">fun </span></strike><strike><span class="token operator">&lt;</span></strike><span class="token keyword"></span><a href="next-event-or-null.html">E</a><span class="token operator"> : </span><a href="-event/index.html">Event</a><strike><span class="token operator">&gt; </span></strike><a href="next-event-or-null.html"><strike><span class="token function">nextEventOrNull</span></strike></a><strike><span class="token punctuation">(</span></strike><strike>timeoutMillis</strike><strike><span class="token operator">: </span></strike><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><strike><span class="token punctuation">, </span></strike><strike>priority</strike><strike><span class="token operator">: </span></strike><a href="-event-priority/index.html">EventPriority</a><strike><span class="token operator"> = </span></strike><strike>EventPriority.MONITOR</strike><strike><span class="token punctuation">, </span></strike><strike><span class="token keyword">crossinline </span></strike><strike>filter</strike><strike><span class="token operator">: </span></strike><span class="token punctuation">(</span><span class="token keyword"></span><a href="next-event-or-null.html">E</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><strike><span class="token operator"> = </span></strike><strike>{ true }</strike><strike><span class="token punctuation">)</span></strike><strike><span class="token operator">: </span></strike><a href="next-event-or-null.html">E</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">挂起当前协程, 直到监听到事件 <a href="next-event-or-null.html">E</a> 的广播并通过 <a href="next-event-or-null.html">filter</a>, 返回这个事件实例.</p><h3 class=""> 已弃用</h3><p class="paragraph">该函数相当于 <a href="next-event.html">GlobalEventChannel.nextEvent</a>. 不一定需要将所有被弃用的 <a href="next-event.html">nextEvent</a> 都换成 <code class="lang-kotlin">GlobalEventChannel.nextEvent</code>, 请根据情况选择合适的 <a href="-event-channel/index.html">EventChannel</a>.</p><h4 class="">Return</h4><p class="paragraph">事件实例, 在超时后返回 <code class="lang-kotlin">null</code></p><h2 class="">See also</h2><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><a href="-event-channel/subscribe.html">net.mamoe.mirai.event.EventChannel</a></span></div><div><div class="title"><div data-togglable="See also"><p class="paragraph">普通地监听一个事件</p></div></div></div></div></div><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><a href="sync-from-event.html">syncFromEvent</a></span></div><div><div class="title"><div data-togglable="See also"><p class="paragraph">挂起当前协程, 并尝试从事件中同步一个值</p></div></div></div></div></div></div></div><h2 class="">Parameters</h2><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><span>timeout</span><wbr><span><span>Millis</span></span></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">超时. 单位为毫秒.</p></div></div></div></div></div><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><span><span>filter</span></span></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">过滤器. 返回 <code class="lang-kotlin">true</code> 时表示得到了需要的实例. 返回 <code class="lang-kotlin">false</code> 时表示继续监听</p></div></div></div></div></div></div></div></div>          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2022 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+</body></html>
+
+
