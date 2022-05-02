@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Permission</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../images/ext.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>mirai</span>            </a>    </div>
+    <div>2.11.0-RC
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="mirai-console::net.mamoe.mirai.console.permission/Permission///PointingToDeclaration//1919319378">
+  <div class="breadcrumbs"><a href="../../index.html">mirai-console</a><span class="delimiter">/</span><a href="../index.html">net.mamoe.mirai.console.permission</a><span class="delimiter">/</span><a href="index.html">Permission</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Permission</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="../../../mirai-console/net.mamoe.mirai.console.permission/-permission-implementation/index.html"><span class="token annotation">PermissionImplementation</span></a></div></div><span class="token keyword">interface </span><a href="index.html">Permission</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">一个抽象的「权限」. 由 <a href="../-permission-service/index.html">PermissionService</a> 实现不同, <a href="index.html">Permission</a> 可能会有多种实例. 但一个权限总是拥有确定的 <a href="id.html">id</a>.</p><p class="paragraph">在匹配权限时, 应使用唯一的 <a href="id.html">id</a> 作为依据. 而不应该使用 <a href="index.html">Permission</a> 实例. 同时, <a href="index.html">Permission</a> 也不适合存储.</p><p class="paragraph"><strong>注意</strong>: 请不要手动实现这个接口. 总是从 <a href="../-permission-service/register.html">PermissionService.register</a> 获得实例.</p><h3 class=""> 获取 <a href="index.html">Permission</a></h3><h4 class=""> 根权限</h4><p class="paragraph"><a href="../-root-permission.html">RootPermission</a> 是所有权限的父权限.</p><h4 class=""> 指令的权限</h4><p class="paragraph">每个指令都拥有一个 <a href="../../net.mamoe.mirai.console.command/-command/permission.html">Command.permission</a>.</p><p class="paragraph"><a href="../../net.mamoe.mirai.console.command/-built-in-commands/parent-permission.html">BuiltInCommands.parentPermission</a> 为所有内建指令的权限.</p><h4 class=""> 手动申请权限</h4><p class="paragraph"><a href="../-permission-service/register.html">PermissionService.register</a></p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Extensions">Extensions</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="985657115%2FClasslikes%2F1919319378" anchor-label="Companion" id="985657115%2FClasslikes%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="985657115%2FClasslikes%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="154051480%2FProperties%2F1919319378" anchor-label="description" id="154051480%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="description.html">description</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="154051480%2FProperties%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><a data-name="154051480%2FProperties%2F1919319378" anchor-label="description" id="154051480%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="description.html">description</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="154051480%2FProperties%2F1919319378" anchor-label="description" id="154051480%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a><p class="paragraph">描述信息. 描述信息在注册权限时强制提供.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1869978827%2FProperties%2F1919319378" anchor-label="id" id="1869978827%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="id.html">id</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1869978827%2FProperties%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><a data-name="1869978827%2FProperties%2F1919319378" anchor-label="id" id="1869978827%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="../-permission-id/index.html">PermissionId</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1869978827%2FProperties%2F1919319378" anchor-label="id" id="1869978827%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a><p class="paragraph">唯一识别 ID. 所有权限的 <a href="id.html">id</a> 都互不相同.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2118673308%2FProperties%2F1919319378" anchor-label="parent" id="2118673308%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="parent.html">parent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2118673308%2FProperties%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><a data-name="2118673308%2FProperties%2F1919319378" anchor-label="parent" id="2118673308%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="parent.html">parent</a><span class="token operator">: </span><a href="index.html">Permission</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="2118673308%2FProperties%2F1919319378" anchor-label="parent" id="2118673308%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a><p class="paragraph">父权限.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="tabbedcontent">Extensions</h2>
+      <div class="table" data-togglable="Extensions"><a data-name="-1456583432%2FExtensions%2F1919319378" anchor-label="parentsWithSelf" id="-1456583432%2FExtensions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-companion/parents-with-self.html"><span>parents</span><wbr><span>With</span><wbr><span><span>Self</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1456583432%2FExtensions%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@get:</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html">Permission</a><span class="token punctuation">.</span><a href="-companion/parents-with-self.html">parentsWithSelf</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/-sequence/index.html">Sequence</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">Permission</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">递归获取 <a href="parent.html">Permission.parent</a>, <code class="lang-kotlin">permission.parent.parent</code>, permission.parent.parent.parent` ... 直到 <a href="parent.html">Permission.parent</a> 为它自己.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2078807281%2FExtensions%2F1919319378" anchor-label="testPermission" id="2078807281%2FExtensions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-permission-service/-companion/test-permission.html"><span>test</span><wbr><span><span>Permission</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2078807281%2FExtensions%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">Permission</a><span class="token punctuation">.</span><a href="../-permission-service/-companion/test-permission.html"><span class="token function">testPermission</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">permittee<span class="token operator">: </span><a href="../-permittee/index.html">Permittee</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">Permission</a><span class="token punctuation">.</span><a href="../-permission-service/-companion/test-permission.html"><span class="token function">testPermission</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">permitteeId<span class="token operator">: </span><a href="../-permittee-id/index.html">PermitteeId</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2022 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        </div>
+    </div>
+</div>
+
+</body></html>
+
