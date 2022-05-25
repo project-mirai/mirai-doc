@@ -1,0 +1,302 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>AbstractPolymorphicMessageKey</title>
+</head><body><link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../scripts/main.js" async></script><script type="text/javascript" src="../../../scripts/prism.js" async></script><script type="text/javascript" src="../../../images/ext.js" async></script><script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+
+  
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html"><span>mirai</span></a></div>
+      <div>2.10.4</div>
+      <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section"><button class="platform-tag platform-selector common-like" data-active="" data-filter=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main"><script type="text/javascript" src="../../../scripts/main.js"></script>
+        <div class="main-content" id="content" pageids="mirai-core-api::net.mamoe.mirai.message.data/AbstractPolymorphicMessageKey///PointingToDeclaration//952922136">
+          <div class="breadcrumbs"><a href="../../index.html">mirai-core-api</a>/<a href="../index.html">net.mamoe.mirai.message.data</a>/<a href="index.html">AbstractPolymorphicMessageKey</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Abstract</span><wbr><span>Polymorphic</span><wbr><span>Message</span><wbr><span><span>Key</span></span></h1>
+            <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+              <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">AbstractPolymorphicMessageKey</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="index.html">B</a><span class="token operator"> : </span><a href="../-single-message/index.html">SingleMessage</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="index.html">M</a><span class="token operator"> : </span><a href="index.html">B</a><span class="token operator">&gt;</span><span class="token punctuation">(</span>baseKey<span class="token operator">: </span><a href="../-message-key/index.html">MessageKey</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">B</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>safeCast<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../-single-message/index.html">SingleMessage</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="index.html">M</a><span class="token operator">?</span><span class="token punctuation">)</span> : <a href="../-abstract-message-key/index.html">AbstractMessageKey</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">M</a><span class="token operator">&gt; </span>, <a href="../-message-key/index.html">MessageKey</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">M</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">多态 <a href="../-message-key/index.html">MessageKey</a>.</p><p class="paragraph">示例: <a href="../-hummer-message/index.html">HummerMessage</a></p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">                 MessageContent<br>                       ↑<br>                 HummerMessage<br>                       ↑<br>          +------------+-------------+------------+<br>          |            |             |            |<br>    PokeMessage     VipFace      FlashImage      ...</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">当 <a href="../-voice/index.html#-1698015698%2FFunctions%2F952922136">连接</a> 一个 <a href="../-vip-face/index.html">VipFace</a> 到一个 <a href="../-message-chain/index.html">MessageChain</a> 时, 由于 <a href="../-vip-face/index.html">VipFace</a> 最上层为 <a href="../-message-content/index.html">MessageContent</a>, 消息链中第一个 <a href="../-message-content/index.html">MessageContent</a> 会被 (保留顺序地) 替换为 <a href="../-vip-face/index.html">VipFace</a>, 其他所有 <a href="../-message-content/index.html">MessageContent</a> 都会被删除.</p><p class="paragraph">如:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val source: MessageSource = ...<br><br>val result = messageChainOf(PlainText("a"), PlainText("b"), source, AtAll) + VipFace.LiuLian<br>// result 为 [VipFace.LiuLian, source]<br><br>val result = source1 + source2<br>// result 为 [source2], 总是右侧替换左侧</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>            </div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+            <div class="tabs-section-body">
+              <h2 class="tabbedcontent">Constructors</h2>
+              <div class="table" data-togglable="Constructors"><a data-name="-661766643%2FConstructors%2F952922136" anchor-label="AbstractPolymorphicMessageKey" id="-661766643%2FConstructors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue TabbedContent">
+                    <div class=""><span class="inline-flex"><a href="-abstract-polymorphic-message-key.html">AbstractPolymorphicMessageKey</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-661766643%2FConstructors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="index.html">B</a><span class="token operator"> : </span><a href="../-single-message/index.html">SingleMessage</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="index.html">M</a><span class="token operator"> : </span><a href="index.html">B</a><span class="token operator">&gt; </span><a href="-abstract-polymorphic-message-key.html"><span class="token function">AbstractPolymorphicMessageKey</span></a><span class="token punctuation">(</span>baseKey<span class="token operator">: </span><a href="../-message-key/index.html">MessageKey</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">B</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>safeCast<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../-single-message/index.html">SingleMessage</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="index.html">M</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="-1830561768%2FProperties%2F952922136" anchor-label="safeCast" id="-1830561768%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-message-key/safe-cast.html">safeCast</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1830561768%2FProperties%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><a data-name="-1830561768%2FProperties%2F952922136" anchor-label="safeCast" id="-1830561768%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-message-key/safe-cast.html">safeCast</a><span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="../-single-message/index.html">SingleMessage</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="index.html">M</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1830561768%2FProperties%2F952922136" anchor-label="safeCast" id="-1830561768%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a><p class="paragraph">将一个 <a href="../-single-message/index.html">SingleMessage</a> 强转为 <a href="../-message-key/index.html">M</a> 类型. 在类型不符合时返回 <code class="lang-kotlin">null</code></p></div></div>                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Inheritors</h2>
+              <div class="table" data-togglable="Inheritors"><a data-name="-1267464152%2FInheritors%2F952922136" anchor-label="Key" id="-1267464152%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-audio/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1267464152%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="-1187037349%2FInheritors%2F952922136" anchor-label="Key" id="-1187037349%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-online-audio/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1187037349%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="-1391556817%2FInheritors%2F952922136" anchor-label="Key" id="-1391556817%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-offline-audio/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1391556817%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="-681155141%2FInheritors%2F952922136" anchor-label="Key" id="-681155141%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-dice/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-681155141%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="-683508969%2FInheritors%2F952922136" anchor-label="Key" id="-683508969%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-flash-image/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-683508969%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="1238891328%2FInheritors%2F952922136" anchor-label="Key" id="1238891328%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-forward-message/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1238891328%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="225435537%2FInheritors%2F952922136" anchor-label="Key" id="225435537%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-hummer-message/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="225435537%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="1681045609%2FInheritors%2F952922136" anchor-label="Key" id="1681045609%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-market-face/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1681045609%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="-67141961%2FInheritors%2F952922136" anchor-label="Key" id="-67141961%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-online-message-source/-outgoing/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-67141961%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="1278455106%2FInheritors%2F952922136" anchor-label="Key" id="1278455106%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-online-message-source/-outgoing/-to-friend/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1278455106%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="-130388374%2FInheritors%2F952922136" anchor-label="Key" id="-130388374%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-online-message-source/-outgoing/-to-stranger/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-130388374%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="-1715367988%2FInheritors%2F952922136" anchor-label="Key" id="-1715367988%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-online-message-source/-outgoing/-to-temp/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1715367988%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="-170006847%2FInheritors%2F952922136" anchor-label="Key" id="-170006847%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-online-message-source/-outgoing/-to-group/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-170006847%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="317515181%2FInheritors%2F952922136" anchor-label="Key" id="317515181%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-online-message-source/-incoming/-from-friend/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="317515181%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="330557175%2FInheritors%2F952922136" anchor-label="Key" id="330557175%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-online-message-source/-incoming/-from-temp/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="330557175%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="-175687659%2FInheritors%2F952922136" anchor-label="Key" id="-175687659%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-online-message-source/-incoming/-from-stranger/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-175687659%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="-1170836234%2FInheritors%2F952922136" anchor-label="Key" id="-1170836234%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-online-message-source/-incoming/-from-group/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1170836234%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="1900014653%2FInheritors%2F952922136" anchor-label="Key" id="1900014653%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-online-message-source/-incoming/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1900014653%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="-191104381%2FInheritors%2F952922136" anchor-label="Key" id="-191104381%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-offline-message-source/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-191104381%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="1800487944%2FInheritors%2F952922136" anchor-label="Key" id="1800487944%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-music-share/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1800487944%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="1487522384%2FInheritors%2F952922136" anchor-label="Key" id="1487522384%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-poke-message/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1487522384%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="-185534672%2FInheritors%2F952922136" anchor-label="Key" id="-185534672%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-service-message/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-185534672%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="-488216860%2FInheritors%2F952922136" anchor-label="Key" id="-488216860%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-vip-face/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-488216860%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+<a data-name="-373387188%2FInheritors%2F952922136" anchor-label="Key" id="-373387188%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+                <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-voice/-key/index.html">Key</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-373387188%2FInheritors%2F952922136"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2022 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+</body></html>
+
+

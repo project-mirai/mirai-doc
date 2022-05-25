@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>PluginLoader</title>
+</head><body><link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script><link href="../../../styles/style.css" rel="Stylesheet"><link href="../../../styles/jetbrains-mono.css" rel="Stylesheet"><link href="../../../styles/main.css" rel="Stylesheet"><link href="../../../styles/prism.css" rel="Stylesheet"><link href="../../../styles/logo-styles.css" rel="Stylesheet"><script type="text/javascript" src="../../../scripts/clipboard.js" async></script><script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script><script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script><script type="text/javascript" src="../../../scripts/main.js" async></script><script type="text/javascript" src="../../../scripts/prism.js" async></script><script type="text/javascript" src="../../../images/ext.js" async></script><script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+
+  
+    <div class="navigation-wrapper" id="navigation-wrapper">
+      <div id="leftToggler"><span class="icon-toggler"></span></div>
+      <div class="library-name"><a href="../../../index.html"><span>mirai</span></a></div>
+      <div>2.10.4</div>
+      <div class="pull-right d-flex"><button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main"><script type="text/javascript" src="../../../scripts/main.js"></script>
+        <div class="main-content" id="content" pageids="mirai-console::net.mamoe.mirai.console.plugin.loader/PluginLoader///PointingToDeclaration//1919319378">
+          <div class="breadcrumbs"><a href="../../index.html">mirai-console</a>/<a href="../index.html">net.mamoe.mirai.console.plugin.loader</a>/<a href="index.html">PluginLoader</a></div>
+          <div class="cover ">
+            <h1 class="cover"><span>Plugin</span><wbr><span><span>Loader</span></span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">PluginLoader</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">P</a><span class="token operator"> : </span><a href="../../net.mamoe.mirai.console.plugin/-plugin/index.html">Plugin</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">D</a><span class="token operator"> : </span><a href="../../net.mamoe.mirai.console.plugin.description/-plugin-description/index.html">PluginDescription</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">插件加载器.</p><p class="paragraph">插件加载器只实现寻找插件列表, 加载插件, 启用插件, 关闭插件这四个功能.</p><p class="paragraph">一个插件要在何时被加载，依赖如何处理，<a href="index.html">PluginLoader</a> 都无需关心.</p><p class="paragraph">有关插件的依赖和已加载的插件列表由 <a href="../../net.mamoe.mirai.console.plugin/-plugin-manager/index.html">PluginManager</a> 维护.</p><h2 class=""> 内建加载器</h2><ul><li><p class="paragraph"><a href="../../net.mamoe.mirai.console.plugin.jvm/-jvm-plugin-loader/index.html">JvmPluginLoader</a> Jar 插件加载器</p></li></ul><h2 class=""> 扩展加载器</h2><p class="paragraph">插件被允许扩展一个加载器.</p><h3 class=""> 实现扩展加载器</h3><p class="paragraph">直接实现接口 <a href="index.html">PluginLoader</a> 或 <a href="../-file-plugin-loader/index.html">FilePluginLoader</a>, 并注册 <a href="../../net.mamoe.mirai.console.extensions/-plugin-loader-provider/index.html">PluginLoaderProvider</a></p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="See also">See also</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">See also</h2>
+              <div data-togglable="See also">
+                <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><a href="../../net.mamoe.mirai.console.plugin.jvm/-jvm-plugin-loader/index.html">net.mamoe.mirai.console.plugin.jvm.JvmPluginLoader</a></span></div><div><div class="title"><div data-togglable="See also"><p class="paragraph">Jar 插件加载器</p></div></div></div></div></div><div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><a href="../../net.mamoe.mirai.console.extensions/-plugin-loader-provider/index.html">net.mamoe.mirai.console.extensions.PluginLoaderProvider</a></span></div><div><div class="title"><div data-togglable="See also"><p class="paragraph">扩展</p></div></div></div></div></div></div></div></div></div>
+              </div>
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="-1003691839%2FFunctions%2F1919319378" anchor-label="disable" id="-1003691839%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+                <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="disable.html"><span><span>disable</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1003691839%2FFunctions%2F1919319378"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="disable.html"><span class="token function">disable</span></a><span class="token punctuation">(</span>plugin<span class="token operator">: </span><a href="index.html">P</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">主动禁用这个插件.</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-2011371426%2FFunctions%2F1919319378" anchor-label="enable" id="-2011371426%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+                <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="enable.html"><span><span>enable</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2011371426%2FFunctions%2F1919319378"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="enable.html"><span class="token function">enable</span></a><span class="token punctuation">(</span>plugin<span class="token operator">: </span><a href="index.html">P</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">主动启用这个插件.</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-774284498%2FFunctions%2F1919319378" anchor-label="getPluginDescription" id="-774284498%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+                <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="get-plugin-description.html"><span>get</span><wbr><span>Plugin</span><wbr><span><span>Description</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-774284498%2FFunctions%2F1919319378"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="get-plugin-description.html"><span class="token function">getPluginDescription</span></a><span class="token punctuation">(</span>plugin<span class="token operator">: </span><a href="index.html">P</a><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">D</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">获取此插件的描述.</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-179889844%2FFunctions%2F1919319378" anchor-label="listPlugins" id="-179889844%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+                <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="list-plugins.html"><span>list</span><wbr><span><span>Plugins</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-179889844%2FFunctions%2F1919319378"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="list-plugins.html"><span class="token function">listPlugins</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">P</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">扫描并返回可以被加载的插件的列表.</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="-1052457663%2FFunctions%2F1919319378" anchor-label="load" id="-1052457663%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+                <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="load.html"><span><span>load</span></span></a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1052457663%2FFunctions%2F1919319378"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="load.html"><span class="token function">load</span></a><span class="token punctuation">(</span>plugin<span class="token operator">: </span><a href="index.html">P</a><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">主动加载一个插件 (实例), 但不 <a href="../../../mirai-console/net.mamoe.mirai.console.plugin/-plugin-manager/-i-n-s-t-a-n-c-e/enable-plugin.html">启用</a> 它. 返回加载成功的主类实例</p></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Inheritors</h2>
+              <div class="table" data-togglable="Inheritors"><a data-name="-132139817%2FInheritors%2F1919319378" anchor-label="FilePluginLoader" id="-132139817%2FInheritors%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+                <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-file-plugin-loader/index.html">FilePluginLoader</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-132139817%2FInheritors%2F1919319378"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2022 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span></div>
+      </div>
+    </div>
+  
+</body></html>
+
+
