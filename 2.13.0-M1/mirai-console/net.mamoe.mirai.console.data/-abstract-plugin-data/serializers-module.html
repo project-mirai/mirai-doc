@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>serializersModule</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../images/ext.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>mirai</span>            </a>    </div>
+    <div>2.13.0-M1
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="mirai-console::net.mamoe.mirai.console.data/AbstractPluginData/serializersModule/#/PointingToDeclaration//1919319378">
+  <div class="breadcrumbs"><a href="../../index.html">mirai-console</a><span class="delimiter">/</span><a href="../index.html">net.mamoe.mirai.console.data</a><span class="delimiter">/</span><a href="index.html">AbstractPluginData</a><span class="delimiter">/</span><a href="serializers-module.html">serializersModule</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>serializers</span><wbr><span><span>Module</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="serializers-module.html">serializersModule</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.serialization.modules/SerializersModule///PointingToDeclaration/">SerializersModule</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">序列化本对象数据时使用的 <span data-unresolved-link="kotlinx.serialization.modules/SerializersModule///PointingToDeclaration/">SerializersModule</span>. 用于支持多态序列化等. 在序列化时会先使用 <a href="../-plugin-data/serializers-module.html">PluginData.serializersModule</a>, 再对无法找到 serializer 的类型使用 MessageSerializers.serializersModule.</p><h3 class=""> 使用示例</h3><p class="paragraph">假设你编写了一个类型 <code class="lang-kotlin">ChatHistory</code> 用来存储一个群的消息记录:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">data class ChatHistory(<br>    val groupId: Long,<br>    val chain: List&lt;MessageChain&gt;,<br>)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">要在 <a href="../-plugin-data/index.html">PluginData</a> 中支持它, 需要首先为 <code class="lang-kotlin">ChatHistory</code> 编写 <span data-unresolved-link="kotlinx.serialization/KSerializer///PointingToDeclaration/">KSerializer</span>.</p><p class="paragraph">一种方式是为其添加 <span data-unresolved-link="kotlinx.serialization/Serializable///PointingToDeclaration/">kotlinx.serialization.Serializable</span>:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">@Serializable<br>data class ChatHistory(<br>    val groupId: Long,<br>    val chain: List&lt;MessageChain&gt;,<br>)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">编译器将会自动生成一个 <span data-unresolved-link="kotlinx.serialization/KSerializer///PointingToDeclaration/">KSerializer</span>, 可通过 <code class="lang-kotlin">ChatHistory.Companion.serializer()</code> 获取.</p><p class="paragraph">然后在 <a href="../-plugin-data/index.html">PluginData</a> 定义中添加该 <span data-unresolved-link="kotlinx.serialization/KSerializer///PointingToDeclaration/">KSerializer</span>:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">object MyData : AutoSavePluginData("save") {<br>    // 注意, serializersModule 需要早于其他属性定义初始化<br>    override val serializersModule = SerializersModule {<br>        contextual(ChatHistory::class, ChatHistory.serializers()) // 为 ChatHistory 指定 KSerializer<br>    }<br><br>    val histories: Map&lt;Long, ChatHistory&gt; by value()<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">然而, 即使不覆盖 <code class="lang-kotlin">serializersModule</code> 提供 <span data-unresolved-link="kotlinx.serialization/KSerializer///PointingToDeclaration/">KSerializer</span>, mirai 也会通过反射尝试获取.</p><p class="paragraph">但对于不是使用 <code class="lang-kotlin">@Serializable</code> 注解方式, 或者是 <code class="lang-kotlin">interface</code>, <code class="lang-kotlin">abstract class</code> 等的抽象类型, 则必须覆盖 <code class="lang-kotlin">serializersModule</code> 并提供其 <span data-unresolved-link="kotlinx.serialization/KSerializer///PointingToDeclaration/">KSerializer</span>.</p><h4 class="">Since</h4><p class="paragraph">2.11</p><h2 class="">See also</h2><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span data-unresolved-link="kotlinx.serialization.modules/SerializersModule///PointingToDeclaration/"><span>kotlinx.</span><wbr><span>serialization.</span><wbr><span>modules.</span><wbr><span>Serializers</span><wbr><span><span>Module</span></span></span></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2022 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+
