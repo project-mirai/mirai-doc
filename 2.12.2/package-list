@@ -1,0 +1,55 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:net.mamoe.mirai.utils/PlatformLogger/debug0/#kotlin.String?#kotlin.Throwable?/PointingToDeclaration/mirai-core-api/net.mamoe.mirai.utils/-platform-logger/[jvm]debug0.html
+$dokka.location:net.mamoe.mirai.utils/PlatformLogger/debug0/#kotlin.String?/PointingToDeclaration/mirai-core-api/net.mamoe.mirai.utils/-platform-logger/[jvm]debug0.html
+$dokka.location:net.mamoe.mirai.utils/PlatformLogger/error0/#kotlin.String?#kotlin.Throwable?/PointingToDeclaration/mirai-core-api/net.mamoe.mirai.utils/-platform-logger/[jvm]error0.html
+$dokka.location:net.mamoe.mirai.utils/PlatformLogger/error0/#kotlin.String?/PointingToDeclaration/mirai-core-api/net.mamoe.mirai.utils/-platform-logger/[jvm]error0.html
+$dokka.location:net.mamoe.mirai.utils/PlatformLogger/identity/#/PointingToDeclaration/mirai-core-api/net.mamoe.mirai.utils/-platform-logger/[jvm]identity.html
+$dokka.location:net.mamoe.mirai.utils/PlatformLogger/info0/#kotlin.String?#kotlin.Throwable?/PointingToDeclaration/mirai-core-api/net.mamoe.mirai.utils/-platform-logger/[jvm]info0.html
+$dokka.location:net.mamoe.mirai.utils/PlatformLogger/info0/#kotlin.String?/PointingToDeclaration/mirai-core-api/net.mamoe.mirai.utils/-platform-logger/[jvm]info0.html
+$dokka.location:net.mamoe.mirai.utils/PlatformLogger/verbose0/#kotlin.String?#kotlin.Throwable?/PointingToDeclaration/mirai-core-api/net.mamoe.mirai.utils/-platform-logger/[jvm]verbose0.html
+$dokka.location:net.mamoe.mirai.utils/PlatformLogger/verbose0/#kotlin.String?/PointingToDeclaration/mirai-core-api/net.mamoe.mirai.utils/-platform-logger/[jvm]verbose0.html
+$dokka.location:net.mamoe.mirai.utils/PlatformLogger/warning0/#kotlin.String?#kotlin.Throwable?/PointingToDeclaration/mirai-core-api/net.mamoe.mirai.utils/-platform-logger/[jvm]warning0.html
+$dokka.location:net.mamoe.mirai.utils/PlatformLogger/warning0/#kotlin.String?/PointingToDeclaration/mirai-core-api/net.mamoe.mirai.utils/-platform-logger/[jvm]warning0.html
+module:mirai-console
+net.mamoe.mirai.console
+net.mamoe.mirai.console.command
+net.mamoe.mirai.console.command.descriptor
+net.mamoe.mirai.console.command.java
+net.mamoe.mirai.console.command.parse
+net.mamoe.mirai.console.command.resolve
+net.mamoe.mirai.console.data
+net.mamoe.mirai.console.data.java
+net.mamoe.mirai.console.events
+net.mamoe.mirai.console.extension
+net.mamoe.mirai.console.extensions
+net.mamoe.mirai.console.internal.command
+net.mamoe.mirai.console.internal.data.builtins
+net.mamoe.mirai.console.internal.plugin
+net.mamoe.mirai.console.logging
+net.mamoe.mirai.console.permission
+net.mamoe.mirai.console.plugin
+net.mamoe.mirai.console.plugin.center
+net.mamoe.mirai.console.plugin.description
+net.mamoe.mirai.console.plugin.jvm
+net.mamoe.mirai.console.plugin.loader
+net.mamoe.mirai.console.util
+module:mirai-core-api
+net.mamoe.mirai
+net.mamoe.mirai.contact
+net.mamoe.mirai.contact.announcement
+net.mamoe.mirai.contact.file
+net.mamoe.mirai.contact.roaming
+net.mamoe.mirai.data
+net.mamoe.mirai.event
+net.mamoe.mirai.event.events
+net.mamoe.mirai.internal.event
+net.mamoe.mirai.internal.message
+net.mamoe.mirai.internal.network
+net.mamoe.mirai.message
+net.mamoe.mirai.message.action
+net.mamoe.mirai.message.code
+net.mamoe.mirai.message.data
+net.mamoe.mirai.network
+net.mamoe.mirai.spi
+net.mamoe.mirai.utils
