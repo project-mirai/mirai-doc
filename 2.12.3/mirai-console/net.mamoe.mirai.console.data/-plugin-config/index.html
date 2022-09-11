@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>PluginConfig</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../images/ext.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>mirai</span>            </a>    </div>
+    <div>2.12.3
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="mirai-console::net.mamoe.mirai.console.data/PluginConfig///PointingToDeclaration//1919319378">
+  <div class="breadcrumbs"><a href="../../index.html">mirai-console</a><span class="delimiter">/</span><a href="../index.html">net.mamoe.mirai.console.data</a><span class="delimiter">/</span><a href="index.html">PluginConfig</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Plugin</span><wbr><span><span>Config</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">PluginConfig</a> : <a href="../-plugin-data/index.html">PluginData</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">一个插件的配置数据, 用于和用户交互.</p><p class="paragraph">用户可通过 mirai-console 前端 (如在 Android 中可视化实现) 修改这些配置, 修改会自动写入这个对象中.</p><p class="paragraph"><strong>提示</strong>: 插件内部的数据应用 <a href="../-plugin-data/index.html">PluginData</a> 存储, 而不能使用 <a href="index.html">PluginConfig</a>.</p><h2 class=""> 实现</h2><p class="paragraph">对使用者来说, <a href="index.html">PluginConfig</a> 与 <a href="../-plugin-data/index.html">PluginData</a> 实现几乎相同. 目前仅需在 <a href="../-plugin-data/index.html">PluginData</a> 使用的基础上添加接口实现即可.</p><h3 class=""> Kotlin</h3><p class="paragraph">在 <a href="../-plugin-data/index.html">PluginData</a> 的示例基础上, 修改对象定义</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// 原<br>object MyPluginData : AutoSavePluginData()<br>// 修改为<br>object MyPluginConfig : AutoSavePluginConfig()</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">即可将一个 <a href="../-plugin-data/index.html">PluginData</a> 变更为 <a href="index.html">PluginConfig</a>.</p><h3 class=""> Java</h3><p class="paragraph">见 <a href="../../net.mamoe.mirai.console.data.java/-java-auto-save-plugin-config/index.html">JavaAutoSavePluginConfig</a></p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="See also">See also</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">See also</h2>
+      <div data-togglable="See also">
+        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="See also"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-plugin-data/index.html"><span>net.</span><wbr><span>mamoe.</span><wbr><span>mirai.</span><wbr><span>console.</span><wbr><span>data.</span><wbr><span>PluginData</span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div></div></div></div></div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-36566932%2FFunctions%2F1919319378" anchor-label="onInit" id="-36566932%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-plugin-data/on-init.html"><span>on</span><wbr><span><span>Init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-36566932%2FFunctions%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation">ConsoleExperimentalApi</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-plugin-data/on-init.html"><span class="token function">onInit</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">owner<span class="token operator">: </span><a href="../-plugin-data-holder/index.html">PluginDataHolder</a><span class="token punctuation">, </span></span><span class="parameter ">storage<span class="token operator">: </span><a href="../-plugin-data-storage/index.html">PluginDataStorage</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">当这个 <a href="../-plugin-data/index.html">PluginData</a> 被放入一个 <a href="../-plugin-data-storage/index.html">PluginDataStorage</a> 时调用</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1324863265%2FFunctions%2F1919319378" anchor-label="onValueChanged" id="1324863265%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-plugin-data/on-value-changed.html"><span>on</span><wbr><span>Value</span><wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1324863265%2FFunctions%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation">ConsoleExperimentalApi</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-plugin-data/on-value-changed.html"><span class="token function">onValueChanged</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="../-value/index.html">Value</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">当所属于这个 <a href="../-plugin-data/index.html">PluginData</a> 的 <a href="../-value/index.html">Value</a> 的 <a href="../-value/value.html">值</a> 被修改时被调用. 调用者为 <a href="../-value/index.html">Value</a> 的实现.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="626335505%2FProperties%2F1919319378" anchor-label="saveName" id="626335505%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-plugin-data/save-name.html">saveName</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="626335505%2FProperties%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><a data-name="626335505%2FProperties%2F1919319378" anchor-label="saveName" id="626335505%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation">ConsoleExperimentalApi</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-plugin-data/save-name.html">saveName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="626335505%2FProperties%2F1919319378" anchor-label="saveName" id="626335505%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a><p class="paragraph">这个 <a href="../-plugin-data/index.html">PluginData</a> 保存时使用的名称.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1551165684%2FProperties%2F1919319378" anchor-label="serializersModule" id="1551165684%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-plugin-data/serializers-module.html">serializersModule</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1551165684%2FProperties%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><a data-name="1551165684%2FProperties%2F1919319378" anchor-label="serializersModule" id="1551165684%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-plugin-data/serializers-module.html">serializersModule</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.serialization.modules/SerializersModule///PointingToDeclaration/">SerializersModule</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1551165684%2FProperties%2F1919319378" anchor-label="serializersModule" id="1551165684%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a><p class="paragraph">序列化本对象数据时使用的 <span data-unresolved-link="kotlinx.serialization.modules/SerializersModule///PointingToDeclaration/">SerializersModule</span>. 用于支持多态序列化等. 在序列化时会先使用 <a href="../-plugin-data/serializers-module.html">PluginData.serializersModule</a>, 再对无法找到 serializer 的类型使用 <a href="../../../mirai-core-api/net.mamoe.mirai.message/-message-serializers/serializers-module.html">MessageSerializers.serializersModule</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-588094362%2FProperties%2F1919319378" anchor-label="updaterSerializer" id="-588094362%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-plugin-data/updater-serializer.html">updaterSerializer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-588094362%2FProperties%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><a data-name="-588094362%2FProperties%2F1919319378" anchor-label="updaterSerializer" id="-588094362%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation">ConsoleExperimentalApi</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-plugin-data/updater-serializer.html">updaterSerializer</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.serialization/KSerializer///PointingToDeclaration/">KSerializer</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Inheritors</h2>
+      <div class="table" data-togglable="Inheritors"><a data-name="-459338558%2FInheritors%2F1919319378" anchor-label="AutoSavePluginConfig" id="-459338558%2FInheritors%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-auto-save-plugin-config/index.html">AutoSavePluginConfig</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-459338558%2FInheritors%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1614806036%2FInheritors%2F1919319378" anchor-label="ReadOnlyPluginConfig" id="-1614806036%2FInheritors%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-read-only-plugin-config/index.html">ReadOnlyPluginConfig</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1614806036%2FInheritors%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-860628890%2FInheritors%2F1919319378" anchor-label="JAutoSavePluginConfig" id="-860628890%2FInheritors%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../net.mamoe.mirai.console.data.java/-j-auto-save-plugin-config/index.html">JAutoSavePluginConfig</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-860628890%2FInheritors%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1841163586%2FInheritors%2F1919319378" anchor-label="JAutoSavePluginData" id="-1841163586%2FInheritors%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../net.mamoe.mirai.console.data.java/-j-auto-save-plugin-data/index.html">JAutoSavePluginData</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1841163586%2FInheritors%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-46830994%2FInheritors%2F1919319378" anchor-label="JavaAutoSavePluginConfig" id="-46830994%2FInheritors%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../net.mamoe.mirai.console.data.java/-java-auto-save-plugin-config/index.html">JavaAutoSavePluginConfig</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-46830994%2FInheritors%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="479233734%2FInheritors%2F1919319378" anchor-label="JavaAutoSavePluginData" id="479233734%2FInheritors%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../net.mamoe.mirai.console.data.java/-java-auto-save-plugin-data/index.html">JavaAutoSavePluginData</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="479233734%2FInheritors%2F1919319378"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2022 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        </div>
+    </div>
+</div>
+
+</body></html>
+
