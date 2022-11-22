@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>subscribeMessages</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../images/ext.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../index.html">
+<span>mirai</span>            </a>    </div>
+    <div>2.14.0-dev-shadow-3
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="mirai-core-api::net.mamoe.mirai.event//subscribeMessages/net.mamoe.mirai.event.EventChannel[*]#kotlin.coroutines.CoroutineContext#net.mamoe.mirai.event.ConcurrencyKind#net.mamoe.mirai.event.EventPriority#kotlin.Function1[net.mamoe.mirai.event.MessageSubscribersBuilder[net.mamoe.mirai.event.events.MessageEvent,net.mamoe.mirai.event.Listener[net.mamoe.mirai.event.events.MessageEvent],kotlin.Unit,kotlin.Unit],TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration//952922136">
+  <div class="breadcrumbs"><a href="../index.html">mirai-core-api</a><span class="delimiter">/</span><a href="index.html">net.mamoe.mirai.event</a><span class="delimiter">/</span><a href="subscribe-messages.html">subscribeMessages</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>subscribe</span><wbr><span><span>Messages</span></span></h1>
+  </div>
+  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="subscribe-messages.html">R</a><span class="token operator">&gt; </span><a href="-event-channel/index.html">EventChannel</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="subscribe-messages.html"><span class="token function">subscribeMessages</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;coroutineContext<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-coroutine-context/index.html">CoroutineContext</a><span class="token operator"> = </span>EmptyCoroutineContext<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;concurrencyKind<span class="token operator">: </span><a href="-concurrency-kind/index.html">ConcurrencyKind</a><span class="token operator"> = </span>CONCURRENT<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;priority<span class="token operator">: </span><a href="-event-priority/index.html">EventPriority</a><span class="token operator"> = </span>EventPriority.MONITOR<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;listeners<span class="token operator">: </span><span class="token keyword"></span><a href="index.html#406119737%2FClasslikes%2F952922136">MessageEventSubscribersBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="subscribe-messages.html">R</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="subscribe-messages.html">R</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">通过 DSL 订阅来自所有 <a href="../net.mamoe.mirai/-bot/index.html">Bot</a> 的所有联系人的消息事件.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">eventChannel.subscribeMessages {<br>    "test" {<br>        // 当消息内容为 "test" 时执行<br>        // this: MessageEvent<br>        reply("test!")<br>    }<br><br>    "Hello" reply "Hi" // 当消息内容为 "Hello" 时回复 "Hi"<br>    "quote me" quoteReply "ok" // 当消息内容为 "quote me" 时引用该消息并回复 "ok"<br>    "quote me2" quoteReply {<br>        // lambda 也是允许的：<br>        // 返回值接受 Any?<br>        // 为 Unit 时不发送任何内容；<br>        // 为 Message 时直接发送；<br>        // 为 String 时发送为 PlainText；<br>        // 否则 toString 并发送为 PlainText<br><br>        "ok"<br>    }<br><br>    case("iGNorECase", ignoreCase=true) reply "OK" // 忽略大小写<br>    startsWith("-") reply { cmd -&gt;<br>        // 当消息内容以 "-" 开头时执行<br>        // cmd 为消息去除开头 "-" 的内容<br>    }<br><br><br>    val listener: Listener&lt;MessageEvent&gt; = "1" reply "2"<br>    // 每个语句都会被注册为事件监听器，可以这样获取监听器<br><br>    listener.complete() // 停止 "1" reply "2" 这个事件监听<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h2 class="">See also</h2><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="-event-channel/index.html"><span>net.</span><wbr><span>mamoe.</span><wbr><span>mirai.</span><wbr><span>event.</span><wbr><span>Event</span><wbr><span><span>Channel</span></span></a></div></span></div><div><div class="title"><div data-togglable="See also"><p class="paragraph">事件通道</p></div></div></div></div></div><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="subscribe-friend-messages.html"><span>subscribe</span><wbr><span>Friend</span><wbr><span><span>Messages</span></span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="subscribe-group-messages.html"><span>subscribe</span><wbr><span>Group</span><wbr><span><span>Messages</span></span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="subscribe-group-temp-messages.html"><span>subscribe</span><wbr><span>Group</span><wbr><span>Temp</span><wbr><span><span>Messages</span></span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="subscribe-other-client-messages.html"><span>subscribe</span><wbr><span>Other</span><wbr><span>Client</span><wbr><span><span>Messages</span></span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="subscribe-stranger-messages.html"><span>subscribe</span><wbr><span>Stranger</span><wbr><span><span>Messages</span></span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div></div></div></div>  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2022 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+
