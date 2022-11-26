@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>AbstractExternalResource</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../images/ext.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>mirai</span>            </a>    </div>
+    <div>2.14.0-dev-shadow-11
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="mirai-core-api::net.mamoe.mirai.utils/AbstractExternalResource///PointingToDeclaration//229730364">
+  <div class="breadcrumbs"><a href="../../index.html">mirai-core-api</a><span class="delimiter">/</span><a href="../index.html">net.mamoe.mirai.utils</a><span class="delimiter">/</span><a href="index.html">AbstractExternalResource</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Abstract</span><wbr><span>External</span><wbr><span><span>Resource</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">AbstractExternalResource</a>&nbsp;<span><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a>&nbsp;</span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">displayName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">cleanup<span class="token operator">: </span><a href="-resource-clean-callback/index.html">AbstractExternalResource.ResourceCleanCallback</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="../-external-resource/index.html">ExternalResource</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">一个实现了基本方法的外部资源</p><h2 class=""> 实现</h2><p class="paragraph"><a href="index.html">AbstractExternalResource</a> 实现了大部分必要的方法, 只有 <a href="../-external-resource/input-stream.html">ExternalResource.inputStream</a>, <a href="../-external-resource/size.html">ExternalResource.size</a> 还未实现</p><p class="paragraph">其中 <a href="../-external-resource/input-stream.html">ExternalResource.inputStream</a> 要求每次读取的内容都是一致的</p><p class="paragraph">Example:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">class MyCustomExternalResource: AbstractExternalResource() {<br>     override fun inputStream0(): InputStream = FileInputStream("/test.txt")<br>     override val size: Long get() = File("/test.txt").length()<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h2 class=""> 资源释放</h2><p class="paragraph">如同 mirai 内置的 <a href="../-external-resource/index.html">ExternalResource</a> 实现一样, <a href="index.html">AbstractExternalResource</a> 也会被注册进入资源泄露监视器 (即意味着 <a href="index.html">AbstractExternalResource</a> 也要求手动关闭)</p><p class="paragraph">为了确保逻辑正确性, <a href="index.html">AbstractExternalResource</a> 不允许覆盖其 <a href="close.html">close</a> 方法, 必须在构造 <a href="index.html">AbstractExternalResource</a> 的时候给定一个 <a href="-resource-clean-callback/index.html">ResourceCleanCallback</a> 以进行资源释放</p><p class="paragraph">对于 <a href="-resource-clean-callback/index.html">ResourceCleanCallback</a>, 有以下要求</p><ul><li><p class="paragraph">没有对 <a href="index.html">AbstractExternalResource</a> 的访问 (即没有 <a href="index.html">AbstractExternalResource</a> 的任何引用)</p></li></ul><p class="paragraph">Example:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">class MyRes(<br>     cleanup: ResourceCleanCallback,<br>     val delegate: Closable,<br>): AbstractExternalResource(cleanup) {<br>}<br><br>// 错误, 该写法会导致 Resource 永远也不会被自动释放<br>lateinit var myRes: MyRes<br>val cleanup = ResourceCleanCallback {<br>     myRes.delegate.close()<br>}<br>myRes = MyRes(cleanup, fetchDelegate())<br><br>// 正确<br>val delegate: Closable<br>val cleanup = ResourceCleanCallback {<br>     delegate.close()<br>}<br>val myRes = MyRes(cleanup, delegate)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h4 class="">Since</h4><p class="paragraph">2.9</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="See also">See also</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">See also</h2>
+      <div data-togglable="See also">
+        <div class="platform-hinted WithExtraAttributes with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="See also">
+          <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div data-togglable="See also"><div class="table" data-togglable="See also"><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../-external-resource/index.html"><span>net.</span><wbr><span>mamoe.</span><wbr><span>mirai.</span><wbr><span>utils.</span><wbr><span>External</span><wbr><span><span>Resource</span></span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><a href="../../../mirai-core-api/net.mamoe.mirai.utils/-abstract-external-resource/register-to-leak-observer.html"><span>net.</span><wbr><span>mamoe.</span><wbr><span>mirai.</span><wbr><span>utils.</span><wbr><span>Abstract</span><wbr><span>External</span><wbr><span><span>Resource</span></span></a></div></span></div><div><div class="title"><div data-togglable="See also"></div></div></div></div></div></div></div></div>        </div>
+      </div>
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="403519329%2FConstructors%2F229730364" anchor-label="AbstractExternalResource" id="403519329%2FConstructors%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-abstract-external-resource.html"><span>Abstract</span><wbr><span>External</span><wbr><span><span>Resource</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="403519329%2FConstructors%2F229730364"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-abstract-external-resource.html"><span class="token function">AbstractExternalResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">cleanup<span class="token operator">: </span><a href="-resource-clean-callback/index.html">AbstractExternalResource.ResourceCleanCallback</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1590580025%2FConstructors%2F229730364" anchor-label="AbstractExternalResource" id="1590580025%2FConstructors%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-abstract-external-resource.html"><span>Abstract</span><wbr><span>External</span><wbr><span><span>Resource</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1590580025%2FConstructors%2F229730364"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation">JvmOverloads</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="-abstract-external-resource.html"><span class="token function">AbstractExternalResource</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">displayName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">cleanup<span class="token operator">: </span><a href="-resource-clean-callback/index.html">AbstractExternalResource.ResourceCleanCallback</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="1944037926%2FClasslikes%2F229730364" anchor-label="ResourceCleanCallback" id="1944037926%2FClasslikes%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-resource-clean-callback/index.html"><span>Resource</span><wbr><span>Clean</span><wbr><span><span>Callback</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1944037926%2FClasslikes%2F229730364"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-resource-clean-callback/index.html">ResourceCleanCallback</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="447596454%2FFunctions%2F229730364" anchor-label="calculateResourceId" id="447596454%2FFunctions%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-external-resource/calculate-resource-id.html"><span>calculate</span><wbr><span>Resource</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="447596454%2FFunctions%2F229730364"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="../../../mirai-core-api/net.mamoe.mirai.utils/-mirai-internal-api/index.html"><span class="token annotation">MiraiInternalApi</span></a></div></div><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-external-resource/calculate-resource-id.html"><span class="token function">calculateResourceId</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1714744549%2FFunctions%2F229730364" anchor-label="close" id="-1714744549%2FFunctions%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="close.html"><span><span>close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1714744549%2FFunctions%2F229730364"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="close.html"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1873144201%2FFunctions%2F229730364" anchor-label="input" id="1873144201%2FFunctions%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="input.html"><span><span>input</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1873144201%2FFunctions%2F229730364"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="../../../mirai-core-api/net.mamoe.mirai.utils/-mirai-experimental-api/index.html"><span class="token annotation">MiraiExperimentalApi</span></a></div></div><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="input.html"><span class="token function">input</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">打开 Input. 在返回的 Input 被 Input.close 前无法再次打开流. 注意: 此 API 不稳定, 请使用 <a href="input-stream.html">inputStream</a> 代替.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1852344087%2FFunctions%2F229730364" anchor-label="inputStream" id="-1852344087%2FFunctions%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="input-stream.html"><span>input</span><wbr><span><span>Stream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1852344087%2FFunctions%2F229730364"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="input-stream.html"><span class="token function">inputStream</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html">InputStream</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">打开 <a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html">InputStream</a>. 在返回的 <a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html">InputStream</a> 被 <a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html#close--">关闭</a> 前无法再次打开流.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-569723923%2FFunctions%2F229730364" anchor-label="toAutoCloseable" id="-569723923%2FFunctions%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-external-resource/to-auto-closeable.html"><span>to</span><wbr><span>Auto</span><wbr><span><span>Closeable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-569723923%2FFunctions%2F229730364"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-external-resource/to-auto-closeable.html"><span class="token function">toAutoCloseable</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-external-resource/index.html">ExternalResource</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">创建一个在 <i>使用一次</i> 后就会自动 <a href="../../../mirai-core-api/net.mamoe.mirai.utils/-external-resource/close.html">close</a> 的 <a href="../-external-resource/index.html">ExternalResource</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-516515781%2FProperties%2F229730364" anchor-label="closed" id="-516515781%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="closed.html"><span><span>closed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-516515781%2FProperties%2F229730364"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><a data-name="-516515781%2FProperties%2F229730364" anchor-label="closed" id="-516515781%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">val </span><a href="closed.html">closed</a><span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-516515781%2FProperties%2F229730364" anchor-label="closed" id="-516515781%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a><p class="paragraph">当 <a href="close.html">close</a> 时会 CompletableDeferred.complete 的 Deferred.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1523604037%2FProperties%2F229730364" anchor-label="formatName" id="1523604037%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="format-name.html"><span>format</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1523604037%2FProperties%2F229730364"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><a data-name="1523604037%2FProperties%2F229730364" anchor-label="formatName" id="1523604037%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="format-name.html">formatName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1523604037%2FProperties%2F229730364" anchor-label="formatName" id="1523604037%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a><p class="paragraph">文件格式，如 "png", "amr". 当无法自动识别格式时为 DEFAULT_FORMAT_NAME.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1424967690%2FProperties%2F229730364" anchor-label="isAutoClose" id="-1424967690%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-external-resource/is-auto-close.html"><span>is</span><wbr><span>Auto</span><wbr><span><span>Close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1424967690%2FProperties%2F229730364"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><a data-name="-1424967690%2FProperties%2F229730364" anchor-label="isAutoClose" id="-1424967690%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-external-resource/is-auto-close.html">isAutoClose</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1424967690%2FProperties%2F229730364" anchor-label="isAutoClose" id="-1424967690%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a><p class="paragraph">是否在 <i>使用一次</i> 后自动 <a href="../../../mirai-core-api/net.mamoe.mirai.utils/-external-resource/close.html">close</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-133149739%2FProperties%2F229730364" anchor-label="md5" id="-133149739%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="md5.html"><span><span>md5</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-133149739%2FProperties%2F229730364"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><a data-name="-133149739%2FProperties%2F229730364" anchor-label="md5" id="-133149739%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="md5.html">md5</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-133149739%2FProperties%2F229730364" anchor-label="md5" id="-133149739%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a><p class="paragraph">文件内容 MD5. 16 bytes</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-818559617%2FProperties%2F229730364" anchor-label="origin" id="-818559617%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-external-resource/origin.html"><span><span>origin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-818559617%2FProperties%2F229730364"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><a data-name="-818559617%2FProperties%2F229730364" anchor-label="origin" id="-818559617%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-external-resource/origin.html">origin</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-818559617%2FProperties%2F229730364" anchor-label="origin" id="-818559617%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a><p class="paragraph">该 <a href="../-external-resource/index.html">ExternalResource</a> 的数据来源, 可能有以下的返回</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2107686590%2FProperties%2F229730364" anchor-label="sha1" id="-2107686590%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="sha1.html"><span><span>sha1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2107686590%2FProperties%2F229730364"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><a data-name="-2107686590%2FProperties%2F229730364" anchor-label="sha1" id="-2107686590%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="sha1.html">sha1</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-2107686590%2FProperties%2F229730364" anchor-label="sha1" id="-2107686590%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a><p class="paragraph">文件内容 SHA1. 16 bytes</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1888623364%2FProperties%2F229730364" anchor-label="size" id="1888623364%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-external-resource/size.html"><span><span>size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1888623364%2FProperties%2F229730364"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark jvm-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><a data-name="1888623364%2FProperties%2F229730364" anchor-label="size" id="1888623364%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-external-resource/size.html">size</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1888623364%2FProperties%2F229730364" anchor-label="size" id="1888623364%2FProperties%2F229730364" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a><p class="paragraph">文件大小 bytes</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2022 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+
