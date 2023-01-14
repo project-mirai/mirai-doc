@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Audio</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../images/ext.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>mirai</span>            </a>    </div>
+    <div>2.13.3
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="mirai-core-api::net.mamoe.mirai.message.data/Audio///PointingToDeclaration//952922136">
+  <div class="breadcrumbs"><a href="../../index.html">mirai-core-api</a><span class="delimiter">/</span><a href="../index.html">net.mamoe.mirai.message.data</a><span class="delimiter">/</span><a href="index.html">Audio</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Audio</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">Audio</a> : <a href="../-message-content/index.html">MessageContent</a>, <a href="../-constrain-single/index.html">ConstrainSingle</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">语音消息.</p><p class="paragraph"><a href="index.html">Audio</a> 分为 <a href="../-online-audio/index.html">OnlineAudio</a> 与 <a href="../-offline-audio/index.html">OfflineAudio</a>. 在本地上传的, 或手动构造的语音为 <a href="../-offline-audio/index.html">OfflineAudio</a>. 从服务器接收的语音为 <a href="../-online-audio/index.html">OnlineAudio</a>.</p><h2 class=""> 上传和发送语音</h2><p class="paragraph">使用 <a href="../../net.mamoe.mirai.contact/-audio-supported/upload-audio.html">AudioSupported.uploadAudio</a> 上传语音到服务器并取得 <a href="index.html">Audio</a> 消息实例, 然后通过 <a href="../../net.mamoe.mirai.contact/-contact/send-message.html">Contact.sendMessage</a> 发送.</p><p class="paragraph">Java 示例:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">Audio audio;<br>try {<br>    audio = group.uploadAudio(resource); // 上传文件得到语音实例<br>} finally {<br>    resource.close(); // 保证资源正常关闭<br>}<br>group.sendMessage(audio); // 发送语音消息</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h2 class=""> 下载语音</h2><p class="paragraph">使用 <a href="../-online-audio/url-for-download.html">OnlineAudio.urlForDownload</a> 获取文件下载链接.</p><h2 class=""><a href="index.html">Audio</a> 与 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-voice/index.html">Voice</a> 的转换</h2><p class="paragraph">原 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-voice/index.html">Voice</a> 已弃用故不推荐进行兼容转换. <a href="index.html">Audio</a> 将有稳定性保证, 请尽量使用新的 <a href="index.html">Audio</a>.</p><p class="paragraph">将 <a href="index.html">Audio</a> 转为 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-voice/index.html">Voice</a>: <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-voice/-key/from-audio.html">Voice.fromAudio</a> 将 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-voice/index.html">Voice</a> 转为 <a href="index.html">Audio</a>: <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-voice/to-audio.html">Voice.toAudio</a></p><h4 class="">Since</h4><p class="paragraph">2.7</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Extensions">Extensions</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-1267464152%2FClasslikes%2F952922136" anchor-label="Key" id="-1267464152%2FClasslikes%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-key/index.html"><span><span>Key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1267464152%2FClasslikes%2F952922136"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-key/index.html">Key</a> : <a href="../-abstract-polymorphic-message-key/index.html">AbstractPolymorphicMessageKey</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-message-content/index.html">MessageContent</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">Audio</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="567670873%2FFunctions%2F952922136" anchor-label="contentEquals" id="567670873%2FFunctions%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-vip-face/index.html#-1952203029%2FFunctions%2F952922136"><span>content</span><wbr><span><span>Equals</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="567670873%2FFunctions%2F952922136"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-vip-face/index.html#-1952203029%2FFunctions%2F952922136"><span class="token function">contentEquals</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">another<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">ignoreCase<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">判断内容是否与 <a href="../-vip-face/index.html#-1952203029%2FFunctions%2F952922136">another</a> 相等.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-vip-face/index.html#-1262797853%2FFunctions%2F952922136"><span class="token function">contentEquals</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">another<span class="token operator">: </span><a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a><span class="token punctuation">, </span></span><span class="parameter ">ignoreCase<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">判断内容是否与 <a href="../-vip-face/index.html#-1262797853%2FFunctions%2F952922136">another</a> 相等即 <code class="lang-kotlin">this</code> 与 <a href="../-vip-face/index.html#-1262797853%2FFunctions%2F952922136">another</a> 的 <a href="../-message-content/index.html#-2081354210%2FFunctions%2F952922136">contentToString</a> 相等.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-vip-face/index.html#1639691585%2FFunctions%2F952922136"><span class="token function">contentEquals</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;another<span class="token operator">: </span><a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;ignoreCase<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;strict<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">判断内容是否与 <a href="../-vip-face/index.html#1639691585%2FFunctions%2F952922136">another</a> 相等即 <code class="lang-kotlin">this</code> 与 <a href="../-vip-face/index.html#1639691585%2FFunctions%2F952922136">another</a> 的 <a href="../-message-content/index.html#-2081354210%2FFunctions%2F952922136">contentToString</a> 相等.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="440180399%2FFunctions%2F952922136" anchor-label="contentToString" id="440180399%2FFunctions%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="content-to-string.html"><span>content</span><wbr><span>To</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="440180399%2FFunctions%2F952922136"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="content-to-string.html"><span class="token function">contentToString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">转为最接近官方格式的字符串, 即 "内容". 如 <code class="lang-kotlin">At(member) + "test"</code> 将转为 <code class="lang-kotlin">"@群名片 test"</code>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1762396122%2FFunctions%2F952922136" anchor-label="followedBy" id="-1762396122%2FFunctions%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-vip-face/index.html#-1762396122%2FFunctions%2F952922136"><span>followed</span><wbr><span><span>By</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1762396122%2FFunctions%2F952922136"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-vip-face/index.html#-1762396122%2FFunctions%2F952922136"><span class="token function">followedBy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tail<span class="token operator">: </span><a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-message-chain/index.html">MessageChain</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">将 <code class="lang-kotlin">this</code> 和 <a href="../-vip-face/index.html#-1762396122%2FFunctions%2F952922136">tail</a> 连接.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1586920262%2FFunctions%2F952922136" anchor-label="plus" id="1586920262%2FFunctions%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-vip-face/index.html#159221849%2FFunctions%2F952922136"><span><span>plus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1586920262%2FFunctions%2F952922136"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../-vip-face/index.html#159221849%2FFunctions%2F952922136"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">another<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-message-chain/index.html">MessageChain</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">创建一个<a href="../-message-chain/index.html">消息链</a>, 将 <a href="../-vip-face/index.html#159221849%2FFunctions%2F952922136">another</a> 连接到这个消息的尾部. 这不会改变本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 而是会创建新的 <a href="../-message-chain/index.html">MessageChain</a> 实例. 返回的 <a href="../-message-chain/index.html">MessageChain</a> 实例的第一个元素为本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 随后为按顺序的 <a href="../-vip-face/index.html#159221849%2FFunctions%2F952922136">another</a> 中的元素.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../-vip-face/index.html#427538593%2FFunctions%2F952922136"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">another<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html">CharSequence</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-message-chain/index.html">MessageChain</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">创建一个<a href="../-message-chain/index.html">消息链</a>, 将 <a href="../-vip-face/index.html#427538593%2FFunctions%2F952922136">another</a> 连接到这个消息的尾部. 这不会改变本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 而是会创建新的 <a href="../-message-chain/index.html">MessageChain</a> 实例. 返回的 <a href="../-message-chain/index.html">MessageChain</a> 实例的第一个元素为本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 随后为按顺序的 <a href="../-vip-face/index.html#427538593%2FFunctions%2F952922136">another</a> 中的元素.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../-vip-face/index.html#-179862073%2FFunctions%2F952922136"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">another<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-message-chain/index.html">MessageChain</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">创建一个<a href="../-message-chain/index.html">消息链</a>, 将 <a href="../-vip-face/index.html#-179862073%2FFunctions%2F952922136">another</a> 连接到这个消息的尾部. 这不会改变本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 而是会创建新的 <a href="../-message-chain/index.html">MessageChain</a> 实例. 返回的 <a href="../-message-chain/index.html">MessageChain</a> 实例的第一个元素为本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 随后为按顺序的 <a href="../-vip-face/index.html#-179862073%2FFunctions%2F952922136">another</a> 中的元素.</p></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-name/index.html"><span class="token annotation">JvmName</span></a><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"plusIterableString"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../-vip-face/index.html#-769104837%2FFunctions%2F952922136"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">another<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-message-chain/index.html">MessageChain</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">创建一个<a href="../-message-chain/index.html">消息链</a>, 将 <a href="../-vip-face/index.html#-769104837%2FFunctions%2F952922136">another</a> 连接到这个消息的尾部. 这不会改变本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 而是会创建新的 <a href="../-message-chain/index.html">MessageChain</a> 实例. 返回的 <a href="../-message-chain/index.html">MessageChain</a> 实例的第一个元素为本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 随后为按顺序的 <a href="../-vip-face/index.html#-769104837%2FFunctions%2F952922136">another</a> 中的元素.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../-vip-face/index.html#-1649542347%2FFunctions%2F952922136"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">another<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-message-chain/index.html">MessageChain</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">创建一个<a href="../-message-chain/index.html">消息链</a>, 将 <a href="../-vip-face/index.html#-1649542347%2FFunctions%2F952922136">another</a> 连接到这个消息的尾部. 这不会改变本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 而是会创建新的 <a href="../-message-chain/index.html">MessageChain</a> 实例. 返回的 <a href="../-message-chain/index.html">MessageChain</a> 实例的第一个元素为本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 随后为按顺序的 <a href="../-vip-face/index.html#-1649542347%2FFunctions%2F952922136">another</a> 中的元素.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../-vip-face/index.html#954835331%2FFunctions%2F952922136"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">another<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.sequences/-sequence/index.html">Sequence</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-message-chain/index.html">MessageChain</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">创建一个<a href="../-message-chain/index.html">消息链</a>, 将 <a href="../-vip-face/index.html#954835331%2FFunctions%2F952922136">another</a> 连接到这个消息的尾部. 这不会改变本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 而是会创建新的 <a href="../-message-chain/index.html">MessageChain</a> 实例. 返回的 <a href="../-message-chain/index.html">MessageChain</a> 实例的第一个元素为本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 随后为按顺序的 <a href="../-vip-face/index.html#954835331%2FFunctions%2F952922136">another</a> 中的元素.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../-vip-face/index.html#-967074957%2FFunctions%2F952922136"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">another<span class="token operator">: </span><a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-message-chain/index.html">MessageChain</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">创建一个<a href="../-message-chain/index.html">消息链</a>, 将 <a href="../-vip-face/index.html#-967074957%2FFunctions%2F952922136">another</a> 连接到这个消息的尾部. 这不会改变本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 而是会创建新的 <a href="../-message-chain/index.html">MessageChain</a> 实例. 返回的 <a href="../-message-chain/index.html">MessageChain</a> 实例的第一个元素为本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 随后为按顺序的 <a href="../-vip-face/index.html#-967074957%2FFunctions%2F952922136">another</a> 中的元素.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../-vip-face/index.html#-1698015698%2FFunctions%2F952922136"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">another<span class="token operator">: </span><a href="../-message-chain/index.html">MessageChain</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-message-chain/index.html">MessageChain</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">创建一个<a href="../-message-chain/index.html">消息链</a>, 将 <a href="../-vip-face/index.html#-1698015698%2FFunctions%2F952922136">another</a> 连接到这个消息的尾部. 这不会改变本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 而是会创建新的 <a href="../-message-chain/index.html">MessageChain</a> 实例. 返回的 <a href="../-message-chain/index.html">MessageChain</a> 实例的第一个元素为本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 随后为按顺序的 <a href="../-vip-face/index.html#-1698015698%2FFunctions%2F952922136">another</a> 中的元素.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../-vip-face/index.html#1923523355%2FFunctions%2F952922136"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">another<span class="token operator">: </span><a href="../-single-message/index.html">SingleMessage</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-message-chain/index.html">MessageChain</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">创建一个<a href="../-message-chain/index.html">消息链</a>, 将 <a href="../-vip-face/index.html#1923523355%2FFunctions%2F952922136">another</a> 连接到这个消息的尾部. 这不会改变本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 而是会创建新的 <a href="../-message-chain/index.html">MessageChain</a> 实例. 返回的 <a href="../-message-chain/index.html">MessageChain</a> 实例的第一个元素为本 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a>, 随后为按顺序的 <a href="../-vip-face/index.html#1923523355%2FFunctions%2F952922136">another</a> 中的元素.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="822503770%2FFunctions%2F952922136" anchor-label="toString" id="822503770%2FFunctions%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="to-string.html"><span>to</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="822503770%2FFunctions%2F952922136"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-1110071682%2FProperties%2F952922136" anchor-label="codec" id="-1110071682%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="codec.html"><span><span>codec</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1110071682%2FProperties%2F952922136"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><a data-name="-1110071682%2FProperties%2F952922136" anchor-label="codec" id="-1110071682%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="codec.html">codec</a><span class="token operator">: </span><a href="../-audio-codec/index.html">AudioCodec</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1110071682%2FProperties%2F952922136" anchor-label="codec" id="-1110071682%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a><p class="paragraph">编码方式.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="309782458%2FProperties%2F952922136" anchor-label="extraData" id="309782458%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="extra-data.html"><span>extra</span><wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="309782458%2FProperties%2F952922136"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><a data-name="309782458%2FProperties%2F952922136" anchor-label="extraData" id="309782458%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="extra-data.html">extraData</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="309782458%2FProperties%2F952922136" anchor-label="extraData" id="309782458%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a><p class="paragraph">文件的额外数据. 该数据由服务器提供, 可能会影响语音音质等属性. <a href="extra-data.html">extraData</a> 为 <code class="lang-kotlin">null</code> 时也可以发送语音, 但不确定发送和客户端收听是否会正常.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-359431182%2FProperties%2F952922136" anchor-label="fileMd5" id="-359431182%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="file-md5.html"><span>file</span><wbr><span><span>Md5</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-359431182%2FProperties%2F952922136"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><a data-name="-359431182%2FProperties%2F952922136" anchor-label="fileMd5" id="-359431182%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="file-md5.html">fileMd5</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-359431182%2FProperties%2F952922136" anchor-label="fileMd5" id="-359431182%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a><p class="paragraph">文件 MD5. 16 bytes.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1242915297%2FProperties%2F952922136" anchor-label="filename" id="-1242915297%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="filename.html"><span><span>filename</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1242915297%2FProperties%2F952922136"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><a data-name="-1242915297%2FProperties%2F952922136" anchor-label="filename" id="-1242915297%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="filename.html">filename</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1242915297%2FProperties%2F952922136" anchor-label="filename" id="-1242915297%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a><p class="paragraph">文件名称. 通常为 <code class="lang-kotlin">XXX.amr</code>. 服务器要求文件名后缀必须为 ".amr", 但其<a href="codec.html">编码方式</a>也有可能是非 <a href="../-audio-codec/-a-m-r/index.html">AudioCodec.AMR</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-903636663%2FProperties%2F952922136" anchor-label="fileSize" id="-903636663%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="file-size.html"><span>file</span><wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-903636663%2FProperties%2F952922136"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><a data-name="-903636663%2FProperties%2F952922136" anchor-label="fileSize" id="-903636663%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="file-size.html">fileSize</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-903636663%2FProperties%2F952922136" anchor-label="fileSize" id="-903636663%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a><p class="paragraph">文件大小 bytes. 官方客户端支持最大文件大小约为 1MB, 过大的文件<strong>可能</strong>可以正常上传, 但在官方客户端无法收听 (显示文件损坏).</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="668083733%2FProperties%2F952922136" anchor-label="key" id="668083733%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="key.html"><span><span>key</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="668083733%2FProperties%2F952922136"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><a data-name="668083733%2FProperties%2F952922136" anchor-label="key" id="668083733%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="key.html">key</a><span class="token operator">: </span><a href="../-message-key/index.html">MessageKey</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="668083733%2FProperties%2F952922136" anchor-label="key" id="668083733%2FProperties%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a><p class="paragraph">用于判断是否为同一种元素的 <a href="../-message-key/index.html">MessageKey</a>. 使用多态类型 <a href="../-message-key/index.html">MessageKey</a> 最上层的 <a href="../-message-key/index.html">MessageKey</a>.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Inheritors</h2>
+      <div class="table" data-togglable="Inheritors"><a data-name="-1078130932%2FInheritors%2F952922136" anchor-label="OnlineAudio" id="-1078130932%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-online-audio/index.html">OnlineAudio</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1078130932%2FInheritors%2F952922136"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1401857824%2FInheritors%2F952922136" anchor-label="OfflineAudio" id="-1401857824%2FInheritors%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-offline-audio/index.html">OfflineAudio</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1401857824%2FInheritors%2F952922136"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <h2 class="tabbedcontent">Extensions</h2>
+      <div class="table" data-togglable="Extensions"><a data-name="1460545904%2FExtensions%2F952922136" anchor-label="toVoice" id="1460545904%2FExtensions%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+        <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../to-voice.html"><span>to</span><wbr><span><span>Voice</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1460545904%2FExtensions%2F952922136"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark common-like" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace strikethrough"><strike><span class="token keyword">inline </span></strike><strike><span class="token keyword">fun </span></strike><a href="index.html">Audio</a><strike><span class="token punctuation">.</span></strike><a href="../to-voice.html"><strike><span class="token function">toVoice</span></strike></a><strike><span class="token punctuation">(</span></strike><strike><span class="token punctuation">)</span></strike><strike><span class="token operator">: </span></strike><a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-voice/index.html">Voice</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">将 2.7 新增的 <a href="index.html">Audio</a> 转为旧版本的 <a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-voice/index.html">Voice</a>, 以兼容某些情况.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2023 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+
