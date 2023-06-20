@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>syncFromEvent</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<script type="text/javascript" src="../../images/ext.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../index.html">
+<span>mirai</span>            </a>    </div>
+    <div>2.15.0-RC
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="member" id="content" pageids="mirai-core-api::net.mamoe.mirai.event//syncFromEvent/net.mamoe.mirai.event.EventChannel[*]#net.mamoe.mirai.event.EventPriority#kotlin.coroutines.SuspendFunction1[TypeParam(bounds=[net.mamoe.mirai.event.Event]),TypeParam(bounds=[kotlin.Any])?]/PointingToDeclaration//952922136">
+  <div class="breadcrumbs"><a href="../index.html">mirai-core-api</a><span class="delimiter">/</span><a href="index.html">net.mamoe.mirai.event</a><span class="delimiter">/</span><span class="current">syncFromEvent</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>sync</span><wbr><span>From</span><wbr><span><span>Event</span></span></h1>
+  </div>
+  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="sync-from-event.html">E</a><span class="token operator"> : </span><a href="-event/index.html">Event</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="sync-from-event.html">R</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-event-channel/index.html">EventChannel</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="sync-from-event.html"><span class="token function">syncFromEvent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">priority<span class="token operator">: </span><a href="-event-priority/index.html">EventPriority</a><span class="token operator"> = </span>EventPriority.NORMAL<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">noinline </span>mapper<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="sync-from-event.html">E</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="sync-from-event.html">R</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="sync-from-event.html">R</a></div><p class="paragraph">挂起当前协程, 监听事件 <a href="sync-from-event.html">E</a>, 并尝试从这个事件中<strong>获取</strong>一个值, 在超时时抛出 <span data-unresolved-link="kotlinx.coroutines/TimeoutCancellationException///PointingToDeclaration/">TimeoutCancellationException</span></p><p class="paragraph">本函数是 <a href="-event-channel/subscribe.html">EventChannel.subscribe</a> 的衍生工具函数, 内部会调用 <a href="-event-channel/subscribe.html">EventChannel.subscribe</a>.</p><h2 class=""> 挂起可取消</h2><p class="paragraph">本函数的挂起过程可以被<span data-unresolved-link="kotlinx.coroutines/CancellableContinuation/cancel/#kotlin.Throwable?/PointingToDeclaration/">取消</span>. 这意味着若在 <span data-unresolved-link="kotlinx.coroutines//launch/kotlinx.coroutines.CoroutineScope#kotlin.coroutines.CoroutineContext#kotlinx.coroutines.CoroutineStart#kotlin.coroutines.SuspendFunction1[kotlinx.coroutines.CoroutineScope,kotlin.Unit]/PointingToDeclaration/">CoroutineScope.launch</span> 中使用本函数, 则 <span data-unresolved-link="kotlinx.coroutines//launch/kotlinx.coroutines.CoroutineScope#kotlin.coroutines.CoroutineContext#kotlinx.coroutines.CoroutineStart#kotlin.coroutines.SuspendFunction1[kotlinx.coroutines.CoroutineScope,kotlin.Unit]/PointingToDeclaration/">launch</span> 启动的 <span data-unresolved-link="kotlinx.coroutines/Job///PointingToDeclaration/">Job</span> 可以通过 <span data-unresolved-link="kotlinx.coroutines/Job/cancel/#/PointingToDeclaration/">Job.cancel</span> 取消 (停止), 届时本函数会抛出 <span data-unresolved-link="kotlinx.coroutines/CancellationException///PointingToDeclaration/">CancellationException</span>.</p><h2 class=""> 异常处理</h2><p class="paragraph"><span data-unresolved-link="kotlinx.coroutines.flow//filter/kotlinx.coroutines.flow.Flow[TypeParam(bounds=[kotlin.Any?])]#kotlin.coroutines.SuspendFunction1[TypeParam(bounds=[kotlin.Any?]),kotlin.Boolean]/PointingToDeclaration/">filter</span> 抛出的异常属于监听方异常, 将会由 <a href="next-event.html">nextEvent</a> 原样重新抛出.</p><h2 class=""> 使用 <span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span> 的替代方法</h2><p class="paragraph">在 Kotlin 可使用 <a href="-event-channel/as-flow.html">EventChannel.asFlow</a> 配合 <span data-unresolved-link="kotlinx.coroutines.flow//filter/kotlinx.coroutines.flow.Flow[TypeParam(bounds=[kotlin.Any?])]#kotlin.coroutines.SuspendFunction1[TypeParam(bounds=[kotlin.Any?]),kotlin.Boolean]/PointingToDeclaration/">Flow.filter</span> 和 <span data-unresolved-link="kotlinx.coroutines.flow//first/kotlinx.coroutines.flow.Flow[TypeParam(bounds=[kotlin.Any?])]#/PointingToDeclaration/">Flow.first</span> 实现与 <a href="next-event.html">nextEvent</a> 相似的功能 (注意, Flow 方法将会使用 <a href="-event-priority/-m-o-n-i-t-o-r/index.html">EventPriority.MONITOR</a> 优先级).</p><p class="paragraph">示例:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val senderId: Long = GlobalEventChannel.asFlow()<br>    .filterIsInstance&lt;GroupMessageEvent&gt;()<br>    .filter { it.sender.id == 123456L }<br>    .map { it.sender.id }.first()<br><br>// 上下代码等价<br><br>val senderId: Long = GlobalEventChannel<br>    .filterIsInstance&lt;GroupMessageEvent&gt;()<br>    .syncFromEvent(EventPriority.MONITOR) { if (it.sender.id = 123456) it.sender.name else null }</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">由于 <span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span> 拥有更多操作且逻辑更清晰, 在不需要指定<a href="-event-priority/index.html">事件优先级</a>时更推荐使用 <span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span>.</p><span class="kdoc-tag"><h4 class="">Since</h4><p class="paragraph">2.10</p></span><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>mapper</span></span></u></div></span></div><div><div class="title"><p class="paragraph">过滤转换器. 返回非 null 则代表得到了需要的值. <a href="sync-from-event.html">syncFromEvent</a> 会返回这个值</p></div></div></div></div></div><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-event-channel/subscribe.html"><span>Event</span><wbr><span>Channel.</span><wbr><span>subscribe</span></a></div></span></div><div><div class="title"><p class="paragraph">普通地监听一个事件</p></div></div></div></div><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="next-event.html"><span>next</span><wbr><span><span>Event</span></span></a></div></span></div><div><div class="title"><p class="paragraph">挂起当前协程, 并获取下一个事件实例</p></div></div></div></div></div><h4 class="">Throws</h4><div class="table"><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span><span>Throwable</span></span></a></div></span></div><div><div class="title"><p class="paragraph">当 <a href="sync-from-event.html">mapper</a> 抛出任何异常时, 本函数会抛出该异常</p></div></div></div></div></div></div></div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2023 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+
