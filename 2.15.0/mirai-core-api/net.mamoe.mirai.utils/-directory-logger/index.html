@@ -1,0 +1,502 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>DirectoryLogger</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<script type="text/javascript" src="../../../images/ext.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>mirai</span>            </a>    </div>
+    <div>2.15.0
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":mirai-core-api:dokkaHtmlPartial/commonMain">common</button>
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="mirai-core-api::net.mamoe.mirai.utils/DirectoryLogger///PointingToDeclaration//-101455222">
+  <div class="breadcrumbs"><a href="../../index.html">mirai-core-api</a><span class="delimiter">/</span><a href="../index.html">net.mamoe.mirai.utils</a><span class="delimiter">/</span><span class="current">DirectoryLogger</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Directory</span><wbr><span><span>Logger</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">DirectoryLogger</a>&nbsp;<span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>identity<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">directory<span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token operator"> = </span>File(identity)<span class="token punctuation">, </span></span><span class="parameter ">retain<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator"> = </span>1.weeksToMillis</span></span><span class="token punctuation">)</span> : <a href="../../../mirai-core-api/net.mamoe.mirai.utils/-simple-logger/index.html">SimpleLogger</a></div><p class="paragraph">将日志写入('append')到特定文件夹中的文件. 每日日志独立保存.</p><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../../mirai-core-api/net.mamoe.mirai.utils/-platform-logger/index.html"><span>Platform</span><wbr><span><span>Logger</span></span></a></div></span></div><div><div class="title"><p class="paragraph">查看格式信息</p></div></div></div></div></div></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1545738587%2FConstructors%2F-101455222" anchor-label="DirectoryLogger" id="-1545738587%2FConstructors%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-directory-logger.html"><span>Directory</span><wbr><span><span>Logger</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1545738587%2FConstructors%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">identity<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">directory<span class="token operator">: </span><span data-unresolved-link="/<Error class: unknown class>///PointingToDeclaration/">&lt;Error class: unknown class&gt;</span><span class="token operator"> = </span>File(identity)<span class="token punctuation">, </span></span><span class="parameter ">retain<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator"> = </span>1.weeksToMillis</span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-322088530%2FFunctions%2F-101455222" anchor-label="call" id="-322088530%2FFunctions%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mirai-logger/call.html"><span><span>call</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-322088530%2FFunctions%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-mirai-logger/call.html"><span class="token function">call</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">priority<span class="token operator">: </span><a href="../../../mirai-core-api/net.mamoe.mirai.utils/-simple-logger/-log-priority/index.html">SimpleLogger.LogPriority</a><span class="token punctuation">, </span></span><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">根据优先级调用对应函数</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1894106132%2FFunctions%2F-101455222" anchor-label="debug" id="1894106132%2FFunctions%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mirai-logger/debug.html"><span><span>debug</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1894106132%2FFunctions%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-mirai-logger/debug.html"><span class="token function">debug</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1876922789%2FFunctions%2F-101455222"><span class="token function">debug</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><br><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-998632540%2FFunctions%2F-101455222"><span class="token function">debug</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">记录一个 <i>调试</i> 级别的日志.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="831386103%2FFunctions%2F952922136" anchor-label="debug" id="831386103%2FFunctions%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../debug.html"><span><span>debug</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="831386103%2FFunctions%2F952922136"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-mirai-logger/index.html">MiraiLogger</a><span class="token punctuation">.</span><a href="../debug.html"><span class="token function">debug</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-mirai-logger/index.html">MiraiLogger</a><span class="token punctuation">.</span><a href="../debug.html"><span class="token function">debug</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1325867787%2FFunctions%2F-101455222" anchor-label="debug0" id="1325867787%2FFunctions%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1992674096%2FFunctions%2F-101455222"><span><span>debug0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1325867787%2FFunctions%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1992674096%2FFunctions%2F-101455222"><span class="token function">debug0</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-188539769%2FFunctions%2F-101455222"><span class="token function">debug0</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-814079649%2FFunctions%2F-101455222" anchor-label="error" id="-814079649%2FFunctions%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mirai-logger/error.html"><span><span>error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-814079649%2FFunctions%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-mirai-logger/error.html"><span class="token function">error</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1501434810%2FFunctions%2F-101455222"><span class="token function">error</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><br><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#345294415%2FFunctions%2F-101455222"><span class="token function">error</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">记录一个 <i>错误</i> 级别的日志.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1754797407%2FFunctions%2F952922136" anchor-label="error" id="-1754797407%2FFunctions%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../error.html"><span><span>error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1754797407%2FFunctions%2F952922136"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-mirai-logger/index.html">MiraiLogger</a><span class="token punctuation">.</span><a href="../error.html"><span class="token function">error</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-mirai-logger/index.html">MiraiLogger</a><span class="token punctuation">.</span><a href="../error.html"><span class="token function">error</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1228813835%2FFunctions%2F-101455222" anchor-label="error0" id="-1228813835%2FFunctions%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1014355845%2FFunctions%2F-101455222"><span><span>error0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1228813835%2FFunctions%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#1014355845%2FFunctions%2F-101455222"><span class="token function">error0</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1433314308%2FFunctions%2F-101455222"><span class="token function">error0</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1105727855%2FFunctions%2F-101455222" anchor-label="info" id="1105727855%2FFunctions%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mirai-logger/info.html"><span><span>info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1105727855%2FFunctions%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-mirai-logger/info.html"><span class="token function">info</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1049711990%2FFunctions%2F-101455222"><span class="token function">info</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><br><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#540233107%2FFunctions%2F-101455222"><span class="token function">info</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">记录一个 <i>信息</i> 级别的日志.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-702000939%2FFunctions%2F952922136" anchor-label="info" id="-702000939%2FFunctions%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../info.html"><span><span>info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-702000939%2FFunctions%2F952922136"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-mirai-logger/index.html">MiraiLogger</a><span class="token punctuation">.</span><a href="../info.html"><span class="token function">info</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-mirai-logger/index.html">MiraiLogger</a><span class="token punctuation">.</span><a href="../info.html"><span class="token function">info</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-771945323%2FFunctions%2F-101455222" anchor-label="info0" id="-771945323%2FFunctions%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1971950231%2FFunctions%2F-101455222"><span><span>info0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-771945323%2FFunctions%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1971950231%2FFunctions%2F-101455222"><span class="token function">info0</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-818560800%2FFunctions%2F-101455222"><span class="token function">info0</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="241318437%2FFunctions%2F-101455222" anchor-label="verbose" id="241318437%2FFunctions%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mirai-logger/verbose.html"><span><span>verbose</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="241318437%2FFunctions%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-mirai-logger/verbose.html"><span class="token function">verbose</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1801074868%2FFunctions%2F-101455222"><span class="token function">verbose</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><br><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1470794027%2FFunctions%2F-101455222"><span class="token function">verbose</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">记录一个 <code class="lang-kotlin">verbose</code> 级别的日志. 无关紧要的, 经常大量输出的日志应使用它.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1020590859%2FFunctions%2F952922136" anchor-label="verbose" id="-1020590859%2FFunctions%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../verbose.html"><span><span>verbose</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1020590859%2FFunctions%2F952922136"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-mirai-logger/index.html">MiraiLogger</a><span class="token punctuation">.</span><a href="../verbose.html"><span class="token function">verbose</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-mirai-logger/index.html">MiraiLogger</a><span class="token punctuation">.</span><a href="../verbose.html"><span class="token function">verbose</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1602686185%2FFunctions%2F-101455222" anchor-label="verbose0" id="1602686185%2FFunctions%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1581306689%2FFunctions%2F-101455222"><span><span>verbose0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1602686185%2FFunctions%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1581306689%2FFunctions%2F-101455222"><span class="token function">verbose0</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-626420042%2FFunctions%2F-101455222"><span class="token function">verbose0</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1790666869%2FFunctions%2F-101455222" anchor-label="warning" id="-1790666869%2FFunctions%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mirai-logger/warning.html"><span><span>warning</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1790666869%2FFunctions%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-mirai-logger/warning.html"><span class="token function">warning</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-1534940558%2FFunctions%2F-101455222"><span class="token function">warning</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><br><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#2031548283%2FFunctions%2F-101455222"><span class="token function">warning</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">记录一个 <i>警告</i> 级别的日志.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2146806985%2FFunctions%2F952922136" anchor-label="warning" id="2146806985%2FFunctions%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../warning.html"><span><span>warning</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2146806985%2FFunctions%2F952922136"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-mirai-logger/index.html">MiraiLogger</a><span class="token punctuation">.</span><a href="../warning.html"><span class="token function">warning</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-mirai-logger/index.html">MiraiLogger</a><span class="token punctuation">.</span><a href="../warning.html"><span class="token function">warning</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1935900259%2FFunctions%2F-101455222" anchor-label="warning0" id="-1935900259%2FFunctions%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-382877479%2FFunctions%2F-101455222"><span><span>warning0</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1935900259%2FFunctions%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-382877479%2FFunctions%2F-101455222"><span class="token function">warning0</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#-966191024%2FFunctions%2F-101455222"><span class="token function">warning0</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">e<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="350948480%2FFunctions%2F952922136" anchor-label="withSwitch" id="350948480%2FFunctions%2F952922136" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/commonMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../with-switch.html"><span>with</span><wbr><span><span>Switch</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="350948480%2FFunctions%2F952922136"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/index.html"><span class="token annotation builtin">JvmOverloads</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-mirai-logger/index.html">MiraiLogger</a><span class="token punctuation">.</span><a href="../with-switch.html"><span class="token function">withSwitch</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">default<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-mirai-logger-with-switch/index.html">MiraiLoggerWithSwitch</a></div><div class="brief "><p class="paragraph">给这个 logger 添加一个开关, 用于控制是否记录 log</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1534091632%2FProperties%2F-101455222" anchor-label="identity" id="-1534091632%2FProperties%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1534091632%2FProperties%2F-101455222"><span><span>identity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1534091632%2FProperties%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">val </span><a href="index.html#-1534091632%2FProperties%2F-101455222">identity</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">日志的标记. 在 Mirai 中, identity 可为</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2053478874%2FProperties%2F-101455222" anchor-label="isDebugEnabled" id="-2053478874%2FProperties%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mirai-logger/is-debug-enabled.html"><span>is</span><wbr><span>Debug</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2053478874%2FProperties%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-mirai-logger/is-debug-enabled.html">isDebugEnabled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">当 DEBUG 级别的日志启用时返回 <code class="lang-kotlin">true</code></p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1115553631%2FProperties%2F-101455222" anchor-label="isEnabled" id="-1115553631%2FProperties%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1115553631%2FProperties%2F-101455222"><span>is</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1115553631%2FProperties%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="index.html#-1115553631%2FProperties%2F-101455222">isEnabled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">获取 <a href="../-mirai-logger/index.html">MiraiLogger</a> 是否已开启</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-410350117%2FProperties%2F-101455222" anchor-label="isErrorEnabled" id="-410350117%2FProperties%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mirai-logger/is-error-enabled.html"><span>is</span><wbr><span>Error</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-410350117%2FProperties%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-mirai-logger/is-error-enabled.html">isErrorEnabled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">当 ERROR 级别的日志启用时返回 <code class="lang-kotlin">true</code></p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1696587405%2FProperties%2F-101455222" anchor-label="isInfoEnabled" id="-1696587405%2FProperties%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mirai-logger/is-info-enabled.html"><span>is</span><wbr><span>Info</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1696587405%2FProperties%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-mirai-logger/is-info-enabled.html">isInfoEnabled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">当 INFO 级别的日志启用时返回 <code class="lang-kotlin">true</code></p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1872354411%2FProperties%2F-101455222" anchor-label="isVerboseEnabled" id="-1872354411%2FProperties%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mirai-logger/is-verbose-enabled.html"><span>is</span><wbr><span>Verbose</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1872354411%2FProperties%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-mirai-logger/is-verbose-enabled.html">isVerboseEnabled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">当 VERBOSE 级别的日志启用时返回 <code class="lang-kotlin">true</code>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1475382865%2FProperties%2F-101455222" anchor-label="isWarningEnabled" id="-1475382865%2FProperties%2F-101455222" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"></a>
+          <div class="table-row" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-mirai-logger/is-warning-enabled.html"><span>is</span><wbr><span>Warning</span><wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1475382865%2FProperties%2F-101455222"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-filterable-set=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain" data-active="" data-toggle=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain">jvmBase</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-core-api:dokkaHtmlPartial/jvmBaseMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-mirai-logger/is-warning-enabled.html">isWarningEnabled</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">当 WARNING 级别的日志启用时返回 <code class="lang-kotlin">true</code></p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2023 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+
