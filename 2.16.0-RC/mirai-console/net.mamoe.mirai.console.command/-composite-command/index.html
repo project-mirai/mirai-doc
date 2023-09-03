@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>CompositeCommand</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<script type="text/javascript" src="../../../images/ext.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>mirai</span>            </a>    </div>
+    <div>2.16.0-RC
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":mirai-console:dokkaHtmlPartial/main">jvm</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="mirai-console::net.mamoe.mirai.console.command/CompositeCommand///PointingToDeclaration//1919319378">
+  <div class="breadcrumbs"><a href="../../index.html">mirai-console</a><span class="delimiter">/</span><a href="../index.html">net.mamoe.mirai.console.command</a><span class="delimiter">/</span><span class="current">CompositeCommand</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Composite</span><wbr><span><span>Command</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">CompositeCommand</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">owner<span class="token operator">: </span><a href="../-command-owner/index.html">CommandOwner</a><span class="token punctuation">, </span></span><span class="parameter ">primaryName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">secondaryNames<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">description<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"no description available"</span><span class="token punctuation">, </span></span><span class="parameter ">parentPermission<span class="token operator">: </span><a href="../../net.mamoe.mirai.console.permission/-permission/index.html">Permission</a><span class="token operator"> = </span>owner.parentPermission<span class="token punctuation">, </span></span><span class="parameter ">overrideContext<span class="token operator">: </span><a href="../../net.mamoe.mirai.console.command.descriptor/-command-argument-context/index.html">CommandArgumentContext</a><span class="token operator"> = </span>EmptyCommandArgumentContext</span></span><span class="token punctuation">)</span> : <a href="../-abstract-command/index.html">AbstractCommand</a>, <a href="../-command/index.html">Command</a>, <a href="../../net.mamoe.mirai.console.command.descriptor/-command-argument-context-aware/index.html">CommandArgumentContextAware</a></div><p class="paragraph">复合指令. 指令注册时候会通过反射构造指令解析器.</p><p class="paragraph">Java 示例查看 <a href="../../net.mamoe.mirai.console.command.java/-j-composite-command/index.html">JCompositeCommand</a>.</p><p class="paragraph">Kotlin 示例:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">@OptIn(ConsoleExperimentalAPI::class)<br>object MyCompositeCommand : CompositeCommand(<br>    MyPluginMain, "manage", // "manage" 是主指令名<br>    description = "示例指令", permission = MyCustomPermission,<br>    // prefixOptional = true // 还有更多参数可填, 此处忽略<br>) {<br><br>    // [参数智能解析]<br>    //<br>    // 在控制台执行 "/manage &lt;群号&gt;.&lt;群员&gt; &lt;持续时间&gt;",<br>    // 或在聊天群内发送 "/manage &lt;@一个群员&gt; &lt;持续时间&gt;",<br>    // 或在聊天群内发送 "/manage &lt;目标群员的群名&gt; &lt;持续时间&gt;",<br>    // 或在聊天群内发送 "/manage &lt;目标群员的账号&gt; &lt;持续时间&gt;"<br>    // 时调用这个函数<br>    @SubCommand // 表示这是一个子指令，使用函数名作为子指令名称<br>    suspend fun CommandSender.mute(target: Member, duration: Int) { // 通过 /manage mute &lt;target&gt; &lt;duration&gt; 调用<br>        sendMessage("/manage mute 被调用了, 参数为: $target, $duration")<br><br>        val result = kotlin.runCatching {<br>            target.mute(duration).toString()<br>        }.getOrElse {<br>            it.stackTraceToString()<br>        } // 失败时返回堆栈信息<br><br>        sendMessage("结果: $result")<br>    }<br><br>    @SubCommand<br>    suspend fun SystemCommandSender.foo() {<br>        // 使用 SystemCommandSender 作为接收者，表示指令只能由系统(控制台或其他插件)执行。<br>        // 当用户尝试在聊天环境执行时将会收到错误提示。<br>    }<br><br>    @SubCommand("list", "查看列表") // 可以设置多个子指令名。此时函数名会被忽略。<br>    suspend fun CommandSender.list() { // 执行 "/manage list" 时调用这个函数<br>        sendMessage("/manage list 被调用了")<br>    }<br><br>    @SubCommand<br>    suspend fun CommandContext.repeat() {<br>        // 使用 CommandContext 作为参数，可以获得触发指令的原消息链 originalMessage，其中包含 MessageMetadata。<br>        sender.sendMessage(originalMessage)<br>    }<br><br>    // 支持 Image 类型, 需在聊天中执行此指令.<br>    @SubCommand<br>    suspend fun UserCommandSender.test(image: Image) { // 执行 "/manage test &lt;一张图片&gt;" 时调用这个函数<br>        // 由于 Image 类型消息只可能在聊天环境，可以直接使用 UserCommandSender。<br>        sendMessage("/manage image 被调用了, 图片是 ${image.imageId}")<br>    }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../net.mamoe.mirai.console.command.descriptor/build-command-argument-context.html"><span>build</span><wbr><span>Command</span><wbr><span>Argument</span><wbr><span><span>Context</span></span></a></div></span></div><div></div></div></div></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-built-in-commands/-permission-command/index.html">PermissionCommand</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-built-in-commands/-auto-login-command/index.html">AutoLoginCommand</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../net.mamoe.mirai.console.command.java/-j-composite-command/index.html">JCompositeCommand</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1094937655%2FConstructors%2F1919319378" anchor-label="CompositeCommand" id="-1094937655%2FConstructors%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-composite-command.html"><span>Composite</span><wbr><span><span>Command</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1094937655%2FConstructors%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">owner<span class="token operator">: </span><a href="../-command-owner/index.html">CommandOwner</a><span class="token punctuation">, </span></span><span class="parameter ">primaryName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">vararg </span>secondaryNames<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">description<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"no description available"</span><span class="token punctuation">, </span></span><span class="parameter ">parentPermission<span class="token operator">: </span><a href="../../net.mamoe.mirai.console.permission/-permission/index.html">Permission</a><span class="token operator"> = </span>owner.parentPermission<span class="token punctuation">, </span></span><span class="parameter ">overrideContext<span class="token operator">: </span><a href="../../net.mamoe.mirai.console.command.descriptor/-command-argument-context/index.html">CommandArgumentContext</a><span class="token operator"> = </span>EmptyCommandArgumentContext</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1518358084%2FFunctions%2F1919319378" anchor-label="execute" id="-1518358084%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../execute.html"><span><span>execute</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1518358084%2FFunctions%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-name/index.html"><span class="token annotation builtin">JvmName</span></a><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"execute0"</span></span></span><wbr><span class="token punctuation">)</span></div><div class="block"><span class="token annotation builtin">@</span><a href="../../net.mamoe.mirai.console.command.descriptor/-experimental-command-descriptors/index.html"><span class="token annotation builtin">ExperimentalCommandDescriptors</span></a></div></div><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="../-command/index.html">Command</a><span class="token punctuation">.</span><a href="../execute.html"><span class="token function">execute</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sender<span class="token operator">: </span><a href="../-command-sender/index.html">CommandSender</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">vararg </span>arguments<span class="token operator">: </span><a href="../../../mirai-core-api/net.mamoe.mirai.message.data/-message/index.html">Message</a><span class="token operator"> = </span>emptyArray()<span class="token punctuation">, </span></span><span class="parameter ">checkPermission<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-command-execute-result/index.html">CommandExecuteResult</a></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-name/index.html"><span class="token annotation builtin">JvmName</span></a><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"execute0"</span></span></span><wbr><span class="token punctuation">)</span></div><div class="block"><span class="token annotation builtin">@</span><a href="../../net.mamoe.mirai.console.command.descriptor/-experimental-command-descriptors/index.html"><span class="token annotation builtin">ExperimentalCommandDescriptors</span></a></div></div><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="../-command/index.html">Command</a><span class="token punctuation">.</span><a href="../execute.html"><span class="token function">execute</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sender<span class="token operator">: </span><a href="../-command-sender/index.html">CommandSender</a><span class="token punctuation">, </span></span><span class="parameter ">arguments<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span><span class="token punctuation">, </span></span><span class="parameter ">checkPermission<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-command-execute-result/index.html">CommandExecuteResult</a></div><div class="brief "><p class="paragraph">执行一个确切的指令</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1816166887%2FFunctions%2F1919319378" anchor-label="findDuplicate" id="-1816166887%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-command-manager/-i-n-s-t-a-n-c-e/find-duplicate.html"><span>find</span><wbr><span><span>Duplicate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1816166887%2FFunctions%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-command/index.html">Command</a><span class="token punctuation">.</span><a href="../-command-manager/-i-n-s-t-a-n-c-e/find-duplicate.html"><span class="token function">findDuplicate</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-command/index.html">Command</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-442353247%2FFunctions%2F1919319378" anchor-label="register" id="-442353247%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-command-manager/-i-n-s-t-a-n-c-e/register.html"><span><span>register</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-442353247%2FFunctions%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-command/index.html">Command</a><span class="token punctuation">.</span><a href="../-command-manager/-i-n-s-t-a-n-c-e/register.html"><span class="token function">register</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">override<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="880947893%2FFunctions%2F1919319378" anchor-label="unregister" id="880947893%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-command-manager/-i-n-s-t-a-n-c-e/unregister.html"><span><span>unregister</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="880947893%2FFunctions%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-command/index.html">Command</a><span class="token punctuation">.</span><a href="../-command-manager/-i-n-s-t-a-n-c-e/unregister.html"><span class="token function">unregister</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="2080474936%2FProperties%2F1919319378" anchor-label="allNames" id="2080474936%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-command/-companion/all-names.html"><span>all</span><wbr><span><span>Names</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2080474936%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword"></span><span class="token keyword">val </span><a href="../-command/index.html">Command</a><span class="token punctuation">.</span><a href="../-command/-companion/all-names.html">allNames</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">获取所有指令名称 (包含 <a href="../-command/primary-name.html">primaryName</a> 和 <a href="../-command/secondary-names.html">secondaryNames</a>).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="404965790%2FProperties%2F1919319378" anchor-label="context" id="404965790%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="context.html"><span><span>context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="404965790%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="context.html">context</a><span class="token operator">: </span><a href="../../net.mamoe.mirai.console.command.descriptor/-command-argument-context/index.html">CommandArgumentContext</a></div><div class="brief "><p class="paragraph">智能参数解析环境</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1211414944%2FProperties%2F1919319378" anchor-label="description" id="1211414944%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-command/description.html"><span><span>description</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1211414944%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-command/description.html">description</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">描述, 用于显示在 <a href="../-built-in-commands/-help-command/index.html">BuiltInCommands.HelpCommand</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1233421435%2FProperties%2F1919319378" anchor-label="isRegistered" id="-1233421435%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-command-manager/-i-n-s-t-a-n-c-e/is-registered.html"><span>is</span><wbr><span><span>Registered</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1233421435%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-command/index.html">Command</a><span class="token punctuation">.</span><a href="../-command-manager/-i-n-s-t-a-n-c-e/is-registered.html">isRegistered</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-127804780%2FProperties%2F1919319378" anchor-label="overloads" id="-127804780%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="overloads.html"><span><span>overloads</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-127804780%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../net.mamoe.mirai.console.command.descriptor/-experimental-command-descriptors/index.html"><span class="token annotation builtin">ExperimentalCommandDescriptors</span></a></div></div><span class="token keyword">override </span><span class="token keyword">val </span><a href="overloads.html">overloads</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><span><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-wildcard/index.html"><span class="token annotation builtin">JvmWildcard</span></a>&nbsp;</span><a href="../../net.mamoe.mirai.console.command.descriptor/-command-signature-from-k-function/index.html">CommandSignatureFromKFunction</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">指令可能的参数列表.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="764439049%2FProperties%2F1919319378" anchor-label="owner" id="764439049%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-command/owner.html"><span><span>owner</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="764439049%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-command/owner.html">owner</a><span class="token operator">: </span><a href="../-command-owner/index.html">CommandOwner</a></div><div class="brief "><p class="paragraph">指令拥有者.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1768064655%2FProperties%2F1919319378" anchor-label="permission" id="1768064655%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-command/permission.html"><span><span>permission</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1768064655%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-command/permission.html">permission</a><span class="token operator">: </span><a href="../../net.mamoe.mirai.console.permission/-permission/index.html">Permission</a></div><div class="brief "><p class="paragraph">为此指令分配的权限.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1430574380%2FProperties%2F1919319378" anchor-label="prefixOptional" id="1430574380%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-command/prefix-optional.html"><span>prefix</span><wbr><span><span>Optional</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1430574380%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../net.mamoe.mirai.console.command.descriptor/-experimental-command-descriptors/index.html"><span class="token annotation builtin">ExperimentalCommandDescriptors</span></a></div></div><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-command/prefix-optional.html">prefixOptional</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">为 <code class="lang-kotlin">true</code> 时表示 <a href="../-command-manager/command-prefix.html">指令前缀</a> 可选.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="113208079%2FProperties%2F1919319378" anchor-label="primaryName" id="113208079%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-command/primary-name.html"><span>primary</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="113208079%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-command/primary-name.html">primaryName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">主指令名. 将会参与构成 <a href="../../net.mamoe.mirai.console.permission/-permission/id.html">Permission.id</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-391704246%2FProperties%2F1919319378" anchor-label="secondaryNames" id="-391704246%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-command/secondary-names.html"><span>secondary</span><wbr><span><span>Names</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-391704246%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-command/secondary-names.html">secondaryNames</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">次要指令名</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="188015084%2FProperties%2F1919319378" anchor-label="usage" id="188015084%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="usage.html"><span><span>usage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="188015084%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="usage.html">usage</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">自动根据带有 <a href="../../../mirai-console/net.mamoe.mirai.console.command/-composite-command/-sub-command/index.html">SubCommand</a> 注解的函数签名生成 <a href="usage.html">usage</a>. 也可以被覆盖.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2023 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+
