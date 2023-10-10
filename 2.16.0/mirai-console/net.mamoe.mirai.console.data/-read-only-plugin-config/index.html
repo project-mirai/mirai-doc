@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ReadOnlyPluginConfig</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script>
+<script type="text/javascript" src="../../../images/ext.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>mirai</span>            </a>    </div>
+    <div>2.16.0
+    </div>
+    <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":mirai-console:dokkaHtmlPartial/main">jvm</button>
+        </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="mirai-console::net.mamoe.mirai.console.data/ReadOnlyPluginConfig///PointingToDeclaration//1919319378">
+  <div class="breadcrumbs"><a href="../../index.html">mirai-console</a><span class="delimiter">/</span><a href="../index.html">net.mamoe.mirai.console.data</a><span class="delimiter">/</span><span class="current">ReadOnlyPluginConfig</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Read</span><wbr><span>Only</span><wbr><span>Plugin</span><wbr><span><span>Config</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">ReadOnlyPluginConfig</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">saveName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="../-read-only-plugin-data/index.html">ReadOnlyPluginData</a>, <a href="../-plugin-config/index.html">PluginConfig</a></div><p class="paragraph">只读的 <a href="../-plugin-config/index.html">PluginConfig</a>. 插件只能读取其值, 但值可能在后台被前端 (用户) 修改.</p><span class="kdoc-tag"><h4 class="">Since</h4><p class="paragraph">1.1</p></span><h4 class="">See also</h4><div class="table"><div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-plugin-config/index.html"><span>Plugin</span><wbr><span><span>Config</span></span></a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-auto-save-plugin-data/index.html"><span>Auto</span><wbr><span>Save</span><wbr><span>Plugin</span><wbr><span><span>Data</span></span></a></div></span></div><div></div></div></div></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../net.mamoe.mirai.console.internal.data.builtins/-logger-config/index.html">LoggerConfig</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-645975672%2FConstructors%2F1919319378" anchor-label="ReadOnlyPluginConfig" id="-645975672%2FConstructors%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-read-only-plugin-config.html"><span>Read</span><wbr><span>Only</span><wbr><span>Plugin</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-645975672%2FConstructors%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">saveName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-487405918%2FFunctions%2F1919319378" anchor-label="findBackingFieldValue" id="-487405918%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../find-backing-field-value.html"><span>find</span><wbr><span>Backing</span><wbr><span>Field</span><wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-487405918%2FFunctions%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation builtin">ConsoleExperimentalApi</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../find-backing-field-value.html">T</a><span class="token operator">&gt; </span><a href="../-abstract-plugin-data/index.html">AbstractPluginData</a><span class="token punctuation">.</span><a href="../find-backing-field-value.html"><span class="token function">findBackingFieldValue</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">propertyValueName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-value/index.html">Value</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../find-backing-field-value.html">T</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation builtin">ConsoleExperimentalApi</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../find-backing-field-value.html">T</a><span class="token operator">&gt; </span><a href="../-abstract-plugin-data/index.html">AbstractPluginData</a><span class="token punctuation">.</span><a href="../find-backing-field-value.html"><span class="token function">findBackingFieldValue</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">property<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html">KProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../find-backing-field-value.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-value/index.html">Value</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../find-backing-field-value.html">T</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取这个 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html">KProperty</a> 委托的 <a href="../-value/index.html">Value</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1125464021%2FFunctions%2F1919319378" anchor-label="findBackingFieldValueNode" id="-1125464021%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../find-backing-field-value-node.html"><span>find</span><wbr><span>Backing</span><wbr><span>Field</span><wbr><span>Value</span><wbr><span><span>Node</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1125464021%2FFunctions%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation builtin">ConsoleExperimentalApi</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../find-backing-field-value-node.html">T</a><span class="token operator">&gt; </span><a href="../-abstract-plugin-data/index.html">AbstractPluginData</a><span class="token punctuation">.</span><a href="../find-backing-field-value-node.html"><span class="token function">findBackingFieldValueNode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">property<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html">KProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../find-backing-field-value-node.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-abstract-plugin-data/-value-node/index.html">AbstractPluginData.ValueNode</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="../find-backing-field-value-node.html">T</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">获取这个 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html">KProperty</a> 委托的 <a href="../-value/index.html">Value</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-882260114%2FFunctions%2F1919319378" anchor-label="onInit" id="-882260114%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only-plugin-data/on-init.html"><span>on</span><wbr><span><span>Init</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-882260114%2FFunctions%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation builtin">ConsoleExperimentalApi</span></a></div></div><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../-read-only-plugin-data/on-init.html"><span class="token function">onInit</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">owner<span class="token operator">: </span><a href="../-plugin-data-holder/index.html">PluginDataHolder</a><span class="token punctuation">, </span></span><span class="parameter ">storage<span class="token operator">: </span><a href="../-plugin-data-storage/index.html">PluginDataStorage</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">当这个 <a href="../-plugin-data/index.html">PluginData</a> 被放入一个 <a href="../-plugin-data-storage/index.html">PluginDataStorage</a> 时调用</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="266511455%2FFunctions%2F1919319378" anchor-label="onValueChanged" id="266511455%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only-plugin-data/on-value-changed.html"><span>on</span><wbr><span>Value</span><wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="266511455%2FFunctions%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation builtin">ConsoleExperimentalApi</span></a></div></div><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../-read-only-plugin-data/on-value-changed.html"><span class="token function">onValueChanged</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="../-value/index.html">Value</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">当所属于这个 <a href="../-plugin-data/index.html">PluginData</a> 的 <a href="../-value/index.html">Value</a> 的 <a href="../-value/value.html">值</a> 被修改时被调用.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="960925360%2FFunctions%2F1919319378" anchor-label="provideDelegate" id="960925360%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-plugin-data/provide-delegate.html"><span>provide</span><wbr><span><span>Delegate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="960925360%2FFunctions%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-abstract-plugin-data/provide-delegate.html">T</a><span class="token operator"> : </span><a href="../-serializer-aware-value/index.html">SerializerAwareValue</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-abstract-plugin-data/provide-delegate.html">T</a><span class="token punctuation">.</span><a href="../-abstract-plugin-data/provide-delegate.html"><span class="token function">provideDelegate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">thisRef<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">property<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-property/index.html">KProperty</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-abstract-plugin-data/provide-delegate.html">T</a></div><div class="brief "><p class="paragraph">使用 <code class="lang-kotlin">by value()</code> 时自动调用此方法, 添加对 <a href="../-value/index.html">Value</a> 的值修改的跟踪, 并创建 <a href="../-abstract-plugin-data/-value-node/index.html">ValueNode</a> 加入 <a href="../-abstract-plugin-data/value-nodes.html">valueNodes</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-997757058%2FFunctions%2F1919319378" anchor-label="track" id="-997757058%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-plugin-data/track.html"><span><span>track</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-997757058%2FFunctions%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation builtin">ConsoleExperimentalApi</span></a></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-abstract-plugin-data/track.html">T</a><span class="token operator"> : </span><a href="../-serializer-aware-value/index.html">SerializerAwareValue</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="../-abstract-plugin-data/track.html"><span class="token function">track</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="../-abstract-plugin-data/track.html">T</a><span class="token punctuation">, </span></span><span class="parameter ">valueName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">annotations<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-annotation/index.html">Annotation</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-abstract-plugin-data/track.html">T</a></div><div class="brief "><p class="paragraph">供手动实现时值跟踪使用 (如 Java 用户). 一般 Kotlin 用户需使用 <a href="../-abstract-plugin-data/provide-delegate.html">provideDelegate</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1669049912%2FFunctions%2F1919319378" anchor-label="value" id="-1669049912%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../value.html"><span><span>value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1669049912%2FFunctions%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-plugin-data/index.html">PluginData</a><span class="token punctuation">.</span><a href="../value.html"><span class="token function">value</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">default<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-serializer-aware-value/index.html">SerializerAwareValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">创建一个 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a> 类型的 <a href="../-value/index.html">Value</a>, 并设置初始值为 <a href="../value.html">default</a></p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-plugin-data/index.html">PluginData</a><span class="token punctuation">.</span><a href="../value.html"><span class="token function">value</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">default<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-serializer-aware-value/index.html">SerializerAwareValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">创建一个 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a> 类型的 <a href="../-value/index.html">Value</a>, 并设置初始值为 <a href="../value.html">default</a></p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-plugin-data/index.html">PluginData</a><span class="token punctuation">.</span><a href="../value.html"><span class="token function">value</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">default<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char/index.html">Char</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-serializer-aware-value/index.html">SerializerAwareValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char/index.html">Char</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">创建一个 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char/index.html">Char</a> 类型的 <a href="../-value/index.html">Value</a>, 并设置初始值为 <a href="../value.html">default</a></p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-plugin-data/index.html">PluginData</a><span class="token punctuation">.</span><a href="../value.html"><span class="token function">value</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">default<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-serializer-aware-value/index.html">SerializerAwareValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">创建一个 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-double/index.html">Double</a> 类型的 <a href="../-value/index.html">Value</a>, 并设置初始值为 <a href="../value.html">default</a></p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-plugin-data/index.html">PluginData</a><span class="token punctuation">.</span><a href="../value.html"><span class="token function">value</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">default<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-serializer-aware-value/index.html">SerializerAwareValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">创建一个 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a> 类型的 <a href="../-value/index.html">Value</a>, 并设置初始值为 <a href="../value.html">default</a></p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../value.html">T</a><span class="token operator">&gt; </span><a href="../-plugin-data/index.html">PluginData</a><span class="token punctuation">.</span><a href="../value.html"><span class="token function">value</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">apply<span class="token operator">: </span><span class="token keyword"></span><a href="../value.html">T</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-serializer-aware-value/index.html">SerializerAwareValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../value.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">通过具体化类型创建一个 <a href="../-serializer-aware-value/index.html">SerializerAwareValue</a>.</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-plugin-data/index.html">PluginData</a><span class="token punctuation">.</span><a href="../value.html"><span class="token function">value</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">default<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-serializer-aware-value/index.html">SerializerAwareValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">创建一个 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a> 类型的 <a href="../-value/index.html">Value</a>, 并设置初始值为 <a href="../value.html">default</a></p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-plugin-data/index.html">PluginData</a><span class="token punctuation">.</span><a href="../value.html"><span class="token function">value</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">default<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-serializer-aware-value/index.html">SerializerAwareValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">创建一个 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a> 类型的 <a href="../-value/index.html">Value</a>, 并设置初始值为 <a href="../value.html">default</a></p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-plugin-data/index.html">PluginData</a><span class="token punctuation">.</span><a href="../value.html"><span class="token function">value</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">default<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-serializer-aware-value/index.html">SerializerAwareValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">创建一个 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-short/index.html">Short</a> 类型的 <a href="../-value/index.html">Value</a>, 并设置初始值为 <a href="../value.html">default</a></p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-plugin-data/index.html">PluginData</a><span class="token punctuation">.</span><a href="../value.html"><span class="token function">value</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">default<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-serializer-aware-value/index.html">SerializerAwareValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">创建一个 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> 类型的 <a href="../-value/index.html">Value</a>, 并设置初始值为 <a href="../value.html">default</a></p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../value.html">T</a><span class="token operator">&gt; </span><a href="../-plugin-data/index.html">PluginData</a><span class="token punctuation">.</span><a href="../value.html"><span class="token function">value</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">default<span class="token operator">: </span><a href="../value.html">T</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">crossinline </span>apply<span class="token operator">: </span><span class="token keyword"></span><a href="../value.html">T</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-serializer-aware-value/index.html">SerializerAwareValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../value.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">通过具体化类型创建一个 <a href="../-serializer-aware-value/index.html">SerializerAwareValue</a>, 并设置初始值.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1878892300%2FFunctions%2F1919319378" anchor-label="valueFromKType" id="1878892300%2FFunctions%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../value-from-k-type.html"><span>value</span><wbr><span>From</span><wbr><span><span>KType</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1878892300%2FFunctions%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation builtin">ConsoleExperimentalApi</span></a></div></div><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../value-from-k-type.html">T</a><span class="token operator">&gt; </span><a href="../-plugin-data/index.html">PluginData</a><span class="token punctuation">.</span><a href="../value-from-k-type.html"><span class="token function">valueFromKType</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">type<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-type/index.html">KType</a><span class="token punctuation">, </span></span><span class="parameter ">default<span class="token operator">: </span><a href="../value-from-k-type.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-serializer-aware-value/index.html">SerializerAwareValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../value-from-k-type.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">通过一个特定的 <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-type/index.html">KType</a> 创建 <a href="../-value/index.html">Value</a>, 并设置初始值.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1124183187%2FProperties%2F1919319378" anchor-label="saveName" id="1124183187%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only-plugin-data/save-name.html"><span>save</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1124183187%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation builtin">ConsoleExperimentalApi</span></a></div></div><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-read-only-plugin-data/save-name.html">saveName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">这个 <a href="../-plugin-data/index.html">PluginData</a> 保存时使用的名称.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1556110658%2FProperties%2F1919319378" anchor-label="saveType" id="1556110658%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-plugin-data/save-type.html"><span>save</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1556110658%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation builtin">ConsoleExperimentalApi</span></a></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="../-plugin-data/save-type.html">saveType</a><span class="token operator">: </span><a href="../-plugin-data/-save-type/index.html">PluginData.SaveType</a></div><div class="brief "><p class="paragraph">决定这个 <a href="../-plugin-data/index.html">PluginData</a> 序列化时使用的格式, 默认为 YAML. 具体实现格式由 <a href="../-plugin-data-storage/index.html">PluginDataStorage</a> 决定.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="94095346%2FProperties%2F1919319378" anchor-label="serializersModule" id="94095346%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-plugin-data/serializers-module.html"><span>serializers</span><wbr><span><span>Module</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="94095346%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-abstract-plugin-data/serializers-module.html">serializersModule</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.serialization.modules/SerializersModule///PointingToDeclaration/">SerializersModule</span></div><div class="brief "><p class="paragraph">序列化本对象数据时使用的 <span data-unresolved-link="kotlinx.serialization.modules/SerializersModule///PointingToDeclaration/">SerializersModule</span>. 用于支持多态序列化等. 在序列化时会先使用 <a href="../-plugin-data/serializers-module.html">PluginData.serializersModule</a>, 再对无法找到 serializer 的类型使用 MessageSerializers.serializersModule.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2045164700%2FProperties%2F1919319378" anchor-label="updaterSerializer" id="-2045164700%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-plugin-data/updater-serializer.html"><span>updater</span><wbr><span><span>Serializer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2045164700%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation builtin">ConsoleExperimentalApi</span></a></div></div><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-abstract-plugin-data/updater-serializer.html">updaterSerializer</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.serialization/KSerializer///PointingToDeclaration/">KSerializer</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">所有 <a href="../-abstract-plugin-data/value-nodes.html">valueNodes</a> 更新和保存序列化器.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-530360389%2FProperties%2F1919319378" anchor-label="valueNodes" id="-530360389%2FProperties%2F1919319378" data-filterable-set=":mirai-console:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":mirai-console:dokkaHtmlPartial/main" data-filterable-set=":mirai-console:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-abstract-plugin-data/value-nodes.html"><span>value</span><wbr><span><span>Nodes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-530360389%2FProperties%2F1919319378"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mirai-console:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../net.mamoe.mirai.console.util/-console-experimental-api/index.html"><span class="token annotation builtin">ConsoleExperimentalApi</span></a></div></div><span class="token keyword"></span><span class="token keyword">val </span><a href="../-abstract-plugin-data/value-nodes.html">valueNodes</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-abstract-plugin-data/-value-node/index.html">AbstractPluginData.ValueNode</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">添加了追踪的 <a href="../-abstract-plugin-data/-value-node/index.html">ValueNode</a> 列表, 即通过 <code class="lang-kotlin">by value</code> 初始化的属性列表.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>Copyright 2019-2023 <a href="https://github.com/mamoe">Mamoe Technologies</a> and contributors.
+            Source code:
+            <a href="https://github.com/mamoe/mirai">GitHub</a></span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+
